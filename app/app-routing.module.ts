@@ -9,7 +9,7 @@ import { PostsComponent } from './views/posts/posts.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'member', component: MemberComponent },
-  { path: 'home/:id', component: PostsComponent ,pathMatch: 'full'},
+  { path: 'home/:id', component: PostsComponent , pathMatch: 'full'},
 ];
 
 @NgModule({
