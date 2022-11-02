@@ -1,19 +1,29 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-//views
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { MemberComponent } from './views/member/member.component';
-import { PostsComponent } from './views/posts/posts.component';
+import { PostsComponent } from './views/post/posts.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'member', component: MemberComponent },
-  { path: 'home/:id', component: PostsComponent , pathMatch: 'full'},
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'member',
+    component: MemberComponent,
+  },
+  {
+    path: 'post/:id',
+    component: PostsComponent,
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

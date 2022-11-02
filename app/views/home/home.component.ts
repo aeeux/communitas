@@ -4,17 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-
-//utilizing OnInit
 export class HomeComponent implements OnInit {
+  constructor() {}
 
-  constructor() {
-    //Contructor called first time before the ngOnInit()
-    //Example: API/Database call
-  }
-
-  ngOnInit(): void {
-    //Called after the contructor and called after the first ngOnChanges()
-  }
-
+  ngOnInit() {}
 }
