@@ -8,11 +8,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './views/home/home.component';
-import { MemberComponent } from './views/member/member.component';
-import { PostsComponent } from './views/post/posts.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, MemberComponent, PostsComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     CommonModule,
     BrowserModule,
