@@ -26,6 +26,13 @@ export class HomeComponent implements OnInit {
             'https://miro.medium.com/max/720/1*a5h7AJISKYMspgWVmU5pYA.jpeg',
           body: 'main text body of something about Quality Education',
         },
+        lifeBelowWater: {
+          title: 'Life Below Water',
+          intro: 'Some Intro about Life Below Water',
+          image:
+            'https://miro.medium.com/max/720/1*a5h7AJISKYMspgWVmU5pYA.jpeg',
+          body: 'main text body of something about Life Below Water',
+        },
       },
     ];
   }
