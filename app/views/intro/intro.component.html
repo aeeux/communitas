@@ -1,0 +1,15 @@
+<div class="" *ngFor="let goal of goals">
+  <p>{{ goal.qualityEducation.title }}</p>
+  <p>{{ goal.genderEquality.intro }}</p>
+  <img
+    src="{{ goal.genderEquality.image }}"
+    alt="img"
+    class="rounded-xl mt-5 mb-16"
+  />
+  <p>{{ goal.genderEquality.body }}</p>
+
+  <div class="p-12">
+    <h2 class="text-7xl">{{ goal.lifeBelowWater.title }}</h2>
+    <p class="text-2xl bg-red-500"></p>
+  </div>
+</div>
