@@ -23,3 +23,8 @@
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
+
+ion-item {
+    --background: none;
+    opacity:1;
+  }

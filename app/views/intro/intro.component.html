@@ -1,15 +1,34 @@
-<div class="" *ngFor="let goal of goals">
-  <p>{{ goal.qualityEducation.title }}</p>
-  <p>{{ goal.genderEquality.intro }}</p>
-  <img
-    src="{{ goal.genderEquality.image }}"
-    alt="img"
-    class="rounded-xl mt-5 mb-16"
-  />
-  <p>{{ goal.genderEquality.body }}</p>
-
-  <div class="">
-    <h2 class="">{{ goal.lifeBelowWater.title }}</h2>
-    <p class=""></p>
-  </div>
-</div>
+<ion-title>Header</ion-title>
+<h1>Main Content</h1>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-item lines="none">
+        <ion-title class="text-3xl mb-5">Ensure Inclusive and Equitable Education</ion-title>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item lines="none">
+        <ion-text class="text-xl text-white/60 leading-tight pr-24">We’re passionate about doing the best digital
+          innovation we can and pushing new technology to its limits. And we achieve results we’re proud of.</ion-text>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row class="p-0 m-0 w-auto ">
+    <ion-col class="p-0 m-0 w-auto ">
+      <ion-card class="ion-no-padding ion-no-margin w-auto aspect-[2.5/1]">
+        <ion-img class="ion-no-padding ion-no-margin rounded-xl object-cover" src="/assets/img/education.jpg"></ion-img>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item lines="none">
+        <ion-text class="ion-no-padding ion-no-margin text-3xl text-white/70 px-20 leading-loose">We’re passionate about doing the best digital
+          innovation we can and pushing new technology to its limits. And we achieve results we’re proud of.</ion-text>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
