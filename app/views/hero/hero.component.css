@@ -89,20 +89,23 @@ video.video {
 
   .fancyText p {
     font-size: 22px;
-    width: 350px;
+    width: 360px;
     border-bottom: 0px;
     border-right: 1px solid white;
     margin-top: 0px;
+    /* padding-right: 20px; */
+    padding-right: 20px;
   }
 
   .fancyTextTwo p {
     font-size: 22px;
-    margin-left: 30px !important;
+    /* margin-left: 20px !important; */
+    padding-left: 20px;
   }
 
-  ion-text.fancyTextTwo.md.hydrated {
+  /* ion-text.fancyTextTwo.md.hydrated {
     margin-left: 30px;
-}
+} */
 
   .text {
     display: flex;
