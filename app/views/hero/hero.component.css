@@ -9,15 +9,15 @@
 
 }
 
-ion-card.z-30.md.hydrated {
+/* ion-card.z-30.md.hydrated {
   padding: 0px;
   margin: 0px;
-}
+} */
 
 ion-text.brødtekst h2 {
   font-size: 45px;
   color: white;
-  margin-top: 45px;
+  margin-top: 10px;
   width: 300px;
 }
 
@@ -30,12 +30,13 @@ ion-text.brødtekst h2 {
   color: white;
   border-bottom: 1px solid white;
   width: 200px;
-  margin-top: 60px;
+  margin-top: 70px;
   padding-bottom: 10px;
 }
 
 .fancyTextTwo p {
   color: white;
+  margin-bottom: 20px;
 
 }
 
