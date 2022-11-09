@@ -26,17 +26,12 @@ ion-text.brødtekst h2 {
   border-radius: 0px;
 }
 
-.logo {
-  font-size: 20px;
-}
-
 .fancyText p{
   color: white;
   border-bottom: 1px solid white;
   width: 200px;
   margin-top: 60px;
   padding-bottom: 10px;
-  margin-bottom: 10px;
 }
 
 .fancyTextTwo p {
@@ -44,11 +39,19 @@ ion-text.brødtekst h2 {
 
 }
 
+.logo{
+  position: absolute;
+  top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
 .tekst {
   padding-left: 20px;
   padding-right: 20px;
   position: absolute;
-  top: 0px;
+  bottom: 0px;
 }
 
 video.video {
@@ -104,6 +107,10 @@ video.video {
   }
 
   .tekst {
+    padding-left: 100px;
+  }
+
+  .logo {
     padding-left: 100px;
   }
 
