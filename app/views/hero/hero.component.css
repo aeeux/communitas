@@ -1,9 +1,17 @@
 .header {
-  height: 500px;
+  height: auto;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0px 99999px rgb(0, 0, 0);
   padding-inline: 0px;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+ion-card.z-30.md.hydrated {
+  padding: 0px;
+  margin: 0px;
 }
 
 ion-text.brødtekst h2 {
@@ -39,8 +47,13 @@ ion-text.brødtekst h2 {
 .tekst {
   padding-left: 20px;
   padding-right: 20px;
+  position: absolute;
+  top: 0px;
 }
 
+video.-z-1 {
+  position: relative;
+}
 
 @media screen and (min-width: 576px) {
 
