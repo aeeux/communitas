@@ -15,9 +15,9 @@ ion-card.z-30.md.hydrated {
 }
 
 ion-text.brødtekst h2 {
-  font-size: 47px;
+  font-size: 45px;
   color: white;
-  margin-top: 100px;
+  margin-top: 45px;
   width: 300px;
 }
 
@@ -51,8 +51,11 @@ ion-text.brødtekst h2 {
   top: 0px;
 }
 
-video.-z-1 {
+video.video {
+  width: 100vw;
+  height: 400px;
   position: relative;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 576px) {
@@ -61,6 +64,7 @@ video.-z-1 {
     font-size: 55px;
     width: 350px;
   }
+
 
 }
 
@@ -102,6 +106,13 @@ video.-z-1 {
   .tekst {
     padding-left: 100px;
   }
+
+  video.video {
+    height: 100vh;
+  }
+
+
+
 }
 
 
