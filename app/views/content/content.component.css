@@ -28,6 +28,9 @@
 
 
 
+div#flex {
+  padding: 0px;
+}
 
 
 .containeren #overskrift {
@@ -48,10 +51,7 @@
 
   div#flex {
     display: flex;
-    padding: 0px;
-    margin: 100px 0px 40px 0px;
 }
-
 
 }
 
