@@ -1,15 +1,22 @@
 .containeren {
   text-align: left;
+  font-size: 9px;
 }
 
+
 .containeren #overskrift {
-font-size: 33px;
+font-size: 23px;
 text-align: left;
 width: 100%;
+margin: 0px;
+padding: 0px;
+}
+ion-col.md.hydrated {
+  padding: 0px;
 }
 
 .containeren #tekst {
-  font-size: 22px;
+  font-size: 19px;
   width: 100%;
   margin: 0px;
   padding: 0px;
@@ -25,4 +32,9 @@ ion-title#overskrift {
 .containeren .tekst {
   padding: 0px;
   margin: 0px;
+}
+
+
+.imgContainer{
+  margin: 20px 0px;
 }
