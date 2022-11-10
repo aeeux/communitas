@@ -1,0 +1,28 @@
+.containeren {
+  text-align: left;
+}
+
+.containeren #overskrift {
+font-size: 33px;
+text-align: left;
+width: 100%;
+}
+
+.containeren #tekst {
+  font-size: 22px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5em;
+}
+
+
+ion-title#overskrift {
+  padding: 0px;
+}
+
+
+.containeren .tekst {
+  padding: 0px;
+  margin: 0px;
+}

@@ -1,0 +1,25 @@
+.containeren #tekst {
+  font-size: 22px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5em;
+}
+
+.containeren #overskrift {
+  font-size: 33px;
+  text-align: left;
+  width: 100%;
+  }
+
+
+  .childContainer {
+    margin-right: 20px;
+  }
+
+
+
+div#flex {
+  padding: 0px;
+  margin: 100px 0px 40px 0px;
+}
