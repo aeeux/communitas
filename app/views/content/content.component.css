@@ -1,5 +1,5 @@
 .containeren #tekst {
-  font-size: 19px;
+  font-size: 17px;
   width: 100%;
   margin: 0px;
   padding: 0px;
@@ -9,8 +9,11 @@
 .containeren {
   margin: 10px;
 }
+.containeren {
+  margin-top: 100px !important;
+}
 .childContainer #tekst {
-  font-size: 19px;
+  font-size: 17px;
 }
 
 
@@ -24,6 +27,7 @@
 
   .childContainer {
     margin-right: 20px;
+    margin: auto;
   }
 
 
@@ -51,6 +55,17 @@ div#flex {
 
   div#flex {
     display: flex;
+  }
+
+.childContainer {
+  margin-right: 20px !important;
+  margin: auto;
+  text-align: justify;
+}
+
+.containeren #tekst {
+  font-size: 19px;
+
 }
 
 }

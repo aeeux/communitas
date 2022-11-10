@@ -1,6 +1,5 @@
 .containeren {
   text-align: left;
-  font-size: 9px;
   margin: 10px;
 }
 
@@ -18,7 +17,7 @@ ion-col.md.hydrated {
 }
 
 .containeren #tekst {
-  font-size: 19px;
+  font-size: 17px;
   width: 100%;
   margin: 0px;
   padding: 0px;
@@ -43,4 +42,16 @@ ion-title#overskrift {
 
 ion-grid.md.hydrated {
   padding: 0px;
+}
+
+
+
+@media screen and (min-width: 769px) {
+
+
+.containeren #tekst {
+  font-size: 19px;
+
+}
+
 }
