@@ -1,10 +1,19 @@
 .containeren #tekst {
-  font-size: 22px;
+  font-size: 19px;
   width: 100%;
   margin: 0px;
   padding: 0px;
   line-height: 1.5em;
 }
+
+.containeren {
+  margin: 10px;
+}
+.childContainer #tekst {
+  font-size: 19px;
+}
+
+
 
 .containeren #overskrift {
   font-size: 33px;
@@ -19,7 +28,30 @@
 
 
 
-div#flex {
-  padding: 0px;
-  margin: 100px 0px 40px 0px;
+
+
+.containeren #overskrift {
+  font-size: 23px;
+  }
+
+  div#flex {
+    display: block;
 }
+
+.pic {
+  margin: 20px 0px !important;
+}
+
+
+
+@media screen and (min-width: 769px) {
+
+  div#flex {
+    display: flex;
+    padding: 0px;
+    margin: 100px 0px 40px 0px;
+}
+
+
+}
+

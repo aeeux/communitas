@@ -1,6 +1,7 @@
 .containeren {
   text-align: left;
   font-size: 9px;
+  margin: 10px;
 }
 
 
@@ -38,4 +39,8 @@ ion-title#overskrift {
 
 .imgContainer{
   margin: 20px 0px;
+}
+
+ion-grid.md.hydrated {
+  padding: 0px;
 }
