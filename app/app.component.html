@@ -1,10 +1,10 @@
 <ul
   class="text-sm fixed z-30 xl:hidden bottom-0 mx-auto flex space-x-10 bg-white text-black p-5 w-full justify-center"
 >
-  <li>Quality Education</li>
-  <li>Infrastructure</li>
-  <li>Life Below Water</li>
-  <li>Gender Equality</li>
+  <li (click)="QualityEducation()">Quality Education</li>
+  <li (click)="Infrastructure()">Infrastructure</li>
+  <li (click)="LifeBelowWater()">Life Below Water</li>
+  <li (click)="GenderEquality()">Gender Equality</li>
 </ul>
 
 <ion-app class="scroll">
@@ -12,22 +12,38 @@
     <!-- Outman -->
     <app-hero class="scroll h-screen"></app-hero>
     <ul
-      class="z-30 fixed font-semibold text-xl hidden xl:block space-y-6 w-56 mt-16"
+      class="z-30 fixed font-semibold text-xl hidden xl:block space-y-6 w-56 mt-16 text-white/40"
     >
-      <div class="flex flex-row float-right">
-        <li class="cursor-pointer" (click)="QualityEducation()">Quality Education</li>
+      <div
+        class="flex flex-row float-right hover:text-white transition-all delay-50 ease-in-out"
+      >
+        <li class="cursor-pointer" (click)="QualityEducation()">
+          Quality Education
+        </li>
         <img class="px-3" src="/assets/icon/arrow.svg" />
       </div>
-      <div class="flex flex-row float-right">
-        <li class="cursor-pointer" (click)="Infrastructure()">Infrastructure</li>
+      <div
+        class="flex flex-row float-right hover:text-white transition-all delay-50 ease-in-out"
+      >
+        <li class="cursor-pointer" (click)="Infrastructure()">
+          Infrastructure
+        </li>
         <img class="px-3" src="/assets/icon/arrow.svg" />
       </div>
-      <div class="flex flex-row float-right">
-        <li class="cursor-pointer" (click)="LifeBelowWater()">Life Below Water</li>
+      <div
+        class="flex flex-row float-right hover:text-white transition-all delay-50 ease-in-out"
+      >
+        <li class="cursor-pointer" (click)="LifeBelowWater()">
+          Life Below Water
+        </li>
         <img class="px-3" src="/assets/icon/arrow.svg" />
       </div>
-      <div class="flex flex-row float-right">
-        <li class="cursor-pointer" (click)="GenderEquality()">Gender Equality</li>
+      <div
+        class="flex flex-row float-right hover:text-white transition-all delay-50 ease-in-out"
+      >
+        <li class="cursor-pointer" (click)="GenderEquality()">
+          Gender Equality
+        </li>
         <img class="px-3" src="/assets/icon/arrow.svg" />
       </div>
     </ul>
