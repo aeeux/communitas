@@ -27,10 +27,7 @@ export class AppComponent implements OnInit {
     solu1: '',
     prob2: '',
     solu2: '',
-    prob3: '',
-    solu3: '',
-    prob4: '',
-    solu4: '',
+
   };
 
   lifeBelowWater = {
@@ -82,10 +79,7 @@ export class AppComponent implements OnInit {
       solu1: '',
       prob2: '',
       solu2: '',
-      prob3: '',
-      solu3: '',
-      prob4: '',
-      solu4: '',
+
     };
 
     this.lifeBelowWater = {
@@ -132,16 +126,12 @@ export class AppComponent implements OnInit {
 
     this.infrastructure = {
       title: 'Industry, innovation & Infrastructure',
-      desc: 'Some Intro about Infrastructure',
+      desc: "In 2022 the economy and businesses are under pressure from all around. First covid, War and now a global recession that hasn't even hit its peak yet. It's clear the infrastructure of both construction and companies are suffering and more than ever we need to think innovative and support new ideas and solutions. ",
       image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-      prob1: "",
-      solu1: '',
-      prob2: '',
-      solu2: '',
-      prob3: '',
-      solu3: '',
-      prob4: '',
-      solu4: '',
+      prob1: "1. fruits and vegetables",
+      solu1: "With products being delayed in transportation a low tech solution for fruit and vegetable producers could be to simply start preserving some of their produce. This has the added benefit in cases of “ugly produce” waste which is easier sold this way. For example as babyfood or in smoothies.",
+      prob2: "2. Longterm construction",
+      solu2: "Even though it might seem like an expensive solution, designing and construction using the new sustainable materials can help your company in the long run. Consider investing more in technology and new design methods in the present, and you will live up to regulations and construction for a longer time. ",
     };
 
     this.lifeBelowWater = {
@@ -194,10 +184,7 @@ export class AppComponent implements OnInit {
       solu1: '',
       prob2: '',
       solu2: '',
-      prob3: '',
-      solu3: '',
-      prob4: '',
-      solu4: '',
+
     };
     this.lifeBelowWater = {
     title: 'Life Below Water',
@@ -248,10 +235,7 @@ export class AppComponent implements OnInit {
       solu1: '',
       prob2: '',
       solu2: '',
-      prob3: '',
-      solu3: '',
-      prob4: '',
-      solu4: '',
+
     };
 
     this.lifeBelowWater = {
