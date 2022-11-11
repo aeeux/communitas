@@ -24,56 +24,20 @@
   font-weight: 500;
   margin-bottom: 13px;
   }
-
-
-  .childContainer {
-    margin-right: 20px;
-    margin: auto;
-  }
-
-
-
-div#flex {
-  padding: 0px;
-}
-
-
-.containeren #overskrift {
+ #overskrift {
   font-size: 25px;
   }
-
-  div#flex {
-    display: block;
-}
-
 .pic {
   margin: 20px 0px !important;
 }
-
 .pic.rounded-xl img {
   border-radius: 4px;
 }
-
-
-
 @media screen and (min-width: 769px) {
 
-  div#flex {
-    display: flex;
-    margin-bottom: 30px;
-  }
-
-.childContainer {
-  margin-right: 20px !important;
-  margin: auto;
-  text-align: justify;
-}
-
-.containeren #overskrift {
+  #overskrift {
   font-size:32px;
   }
-
-
   .containeren #tekst {
     font-size: 24px;
 
