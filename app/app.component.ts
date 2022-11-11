@@ -9,6 +9,8 @@ export class AppComponent implements OnInit {
   intro = {
     title: 'Pick a Topic',
     paragraph: 'We hope you enjoy the read.😊',
+    image:
+      'https://previews.dropbox.com/p/thumb/ABtEMgTZbxRu4sk2rbiqYbz29dcYnpBm9m03Eul5i2uZmZgbnXoXkkQWQty8bU9ZQBKsg_haFdWaiz6G1nRvisNRYLTVhkhufQOckvk66zl7D7L1X9ZxnbJ14n-MY-QdeaaiTiKjftr29a16_jdu6ae6gZlKvwRbvXFvxjkjaPGNVi0s1Cbw-9aVOuWyYC7BAQN2ootM1uF7AFKvBLnbzGR7DFtANza7uxZPQmiY5upiDaNbFfjFpWJuwubtXoGKnD6q82Pgml3z_JOdXftbt5sCxJxCL6WPn5ZYKoDSY6UXkTCEeTtwo9m7fG7aPX3zKhM03iI6m731YwIio4WBtyVeui_7mCoGlJSrtgUvuGm3pwZWvtnEAqRIAuJDwE0dBKE/p.png',
   };
 
   qualityEducation = {
@@ -65,6 +67,7 @@ export class AppComponent implements OnInit {
     this.intro = {
       title: '',
       paragraph: '',
+      image: '',
     };
     this.qualityEducation = {
       title: 'Quality Education',
@@ -124,6 +127,7 @@ export class AppComponent implements OnInit {
     this.intro = {
       title: '',
       paragraph: '',
+      image: '',
     };
     this.qualityEducation = {
       title: '',
@@ -183,6 +187,7 @@ export class AppComponent implements OnInit {
     this.intro = {
       title: '',
       paragraph: '',
+      image: '',
     };
     this.qualityEducation = {
       title: '',
@@ -241,6 +246,7 @@ export class AppComponent implements OnInit {
     this.intro = {
       title: '',
       paragraph: '',
+      image: '',
     };
     this.qualityEducation = {
       title: '',
