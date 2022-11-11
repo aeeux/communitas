@@ -33,3 +33,41 @@ ul li:hover {
   color: white;
   cursor: pointer;
 }
+
+ion-row.row.md.hydrated {
+  display: grid;
+}
+
+.mb-32 {
+  margin-bottom: 1rem;
+}
+
+.ikoner {
+  margin: 5px 0px 15px 0px;
+}
+
+ion-footer.mx-auto.mt-40.pt-24.ion-no-border.footer.md.footer-md.footer-toolbar-padding.hydrated {
+  margin-bottom: 0px !important;
+}
+
+
+
+@media screen and (min-width: 576px) {
+
+  ion-row.row.md.hydrated {
+    display: flex;
+  }
+
+  .mb-32 {
+    margin-bottom: 8rem;
+}
+
+ikoner {
+  margin: 0px;
+}
+
+ion-footer.mx-auto.mt-40.pt-24.ion-no-border.footer.md.footer-md.footer-toolbar-padding.hydrated {
+  margin-bottom: 50px !important;
+}
+
+}

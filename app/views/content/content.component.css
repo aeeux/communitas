@@ -8,10 +8,9 @@
 
 .containeren {
   margin: 10px;
+  margin-top: none;
 }
-.containeren {
-  margin-top: 100px !important;
-}
+
 .childContainer #tekst {
   font-size: 17px;
 }
