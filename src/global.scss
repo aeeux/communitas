@@ -16,21 +16,21 @@
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
-@import '@ionic/angular/css/display.css';
+@import "@ionic/angular/css/display.css";
 
-@import 'tailwindcss/base';
+@import "tailwindcss/base";
 
-@import 'tailwindcss/components';
+@import "tailwindcss/components";
 
-@import 'tailwindcss/utilities';
+@import "tailwindcss/utilities";
 
 ion-item {
-    --background: none;
-    opacity:1;
-  }
+  --background: none;
+  opacity: 1;
+}
 
-  ion-card {
-    --background: none;
-    opacity:1;
-    box-shadow: none !important;
-  }
+ion-card {
+  --background: none;
+  opacity: 1;
+  box-shadow: none !important;
+}
