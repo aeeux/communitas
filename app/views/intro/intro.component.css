@@ -1,0 +1,75 @@
+.containeren {
+  text-align: left;
+  margin: 10px;
+}
+
+.containeren h1 {
+  margin-top: 50px;
+  font-size: 35px;
+}
+
+
+.containeren #overskrift {
+  font-size: 25px;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 0px;
+  margin: 0px;
+  margin-bottom: 10px;
+  margin-top: 50px !important;
+  padding: 0px !important;
+}
+ion-col.md.hydrated {
+  padding: 0px;
+}
+
+.containeren #tekst {
+  font-size: 19px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5em;
+}
+
+
+ion-title#overskrift {
+  padding-bottom: 24px !important;
+}
+
+
+.containeren .tekst {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.imgContainer{
+  margin: 20px 0px;
+}
+
+ion-grid.md.hydrated {
+  padding: 0px;
+}
+
+
+
+@media screen and (min-width: 769px) {
+
+
+.containeren #tekst {
+  font-size: 24px;
+
+}
+
+
+.containeren #overskrift {
+  font-size: 32px;
+}
+
+
+.containeren h1 {
+  margin-top: 50px;
+  font-size: 55px;
+}
+
+}
