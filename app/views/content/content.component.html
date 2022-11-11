@@ -1,32 +1,60 @@
 <div class="containeren">
   <div id="flex" class="flex p-20">
     <div class="childContainer">
-      {{ qualityEducation.title }}
-      {{ infrastructure.title }}
-      {{ lifeBelowWater.title }}
-      {{ genderEquality.title }}
-      <h2 id="overskrift">Ensure Inclusive and Equitable Education</h2>
+      
+      <h2 id="overskrift">
+        {{ lifeBelowWater.title }}
+        {{ qualityEducation.title }}
+        {{ infrastructure.title }}
+        {{ genderEquality.title }}
+      </h2>
       <p id="tekst" class="text-white/70" id="tekst">
-        We’re passionate about doing the best digital innovation we can and
-        pushing new technology to its limits. And we achieve results we’re proud
-        of.
+        {{ lifeBelowWater.desc }}
+        {{ qualityEducation.desc }}
       </p>
+
+      <div class="pic rounded-xl">
+        <img
+          src="{{ lifeBelowWater.image }}"
+          alt=""
+        />
+        <img
+          src="{{ qualityEducation.image }}"
+          alt=""
+        />
+      </div>
+
+      <h2 id="overskrift" class="pt-16">{{ lifeBelowWater.prob1 }} {{ qualityEducation.prob1 }}</h2>
+      <p id="tekst" class="text-white/70" id="tekst">
+        {{ lifeBelowWater.solu1 }}
+        {{ qualityEducation.solu1 }}
+      </p>
+
+      <h2 id="overskrift" class="pt-16">{{ lifeBelowWater.prob2 }}
+        {{ qualityEducation.prob2 }}
+      </h2>
+      <p id="tekst" class="text-white/70" id="tekst">
+        {{ lifeBelowWater.solu2 }}
+        {{ qualityEducation.solu2 }}
+      </p>
+
+      <h2 id="overskrift" class="pt-16">{{ lifeBelowWater.prob3 }}
+        {{ qualityEducation.prob3 }}
+      </h2>
+      <p id="tekst" class="text-white/70" id="tekst">
+        {{ lifeBelowWater.solu3 }}
+        {{ qualityEducation.solu3 }}
+      </p>
+
+      <h2 id="overskrift" class="pt-16">{{ lifeBelowWater.prob4 }}</h2>
+      <p id="tekst" class="text-white/70" id="tekst">
+        {{ lifeBelowWater.solu4 }}
+      </p>
+
+      
     </div>
     <div class="pic rounded-xl">
-      <img
-        src="https://miro.medium.com/max/720/1*a5h7AJISKYMspgWVmU5pYA.jpeg"
-        alt=""
-      />
+      
     </div>
   </div>
-  <p id="tekst" class="text-3xl text-white/70 px-20 leading-loose">
-    We’re passionate about doing the best digital innovation we can and pushing
-    new technology to its limits. <br /><br />
-    We’re passionate about doing the best digital innovation we can and pushing
-    new technology to its limits. <br /><br />
-    We’re passionate about doing the best digital innovation we can and pushing
-    new technology to its limits. And we achieve results we’re proud of. We’re
-    passionate about doing the best digital innovation we can and pushing new
-    technology to its limits. And we achieve results we’re proud of.
-  </p>
 </div>
