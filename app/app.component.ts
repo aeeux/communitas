@@ -131,9 +131,9 @@ export class AppComponent implements OnInit {
     };
 
     this.infrastructure = {
-      title: 'Infrastructure',
+      title: 'Industry, innovation & Infrastructure',
       desc: 'Some Intro about Infrastructure',
-      image: 'https://miro.medium.com/max/720/1*a5h7AJISKYMspgWVmU5pYA.jpeg',
+      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
       prob1: "",
       solu1: '',
       prob2: '',
@@ -202,14 +202,14 @@ export class AppComponent implements OnInit {
     this.lifeBelowWater = {
     title: 'Life Below Water',
     desc: "Our oceans are taking hits from all around. Plastic and chemical pollution is one of the most well known problems that most countries, companies and industries are taking steps towards lowering. But other known problems like overfishing, bleaching and changing of currents are more challenging for companies to combat. Especially those, who arent directly working with or around our oceans. But perhaps it doesn't have to be as complicated as such.",
-    image: 'https://images.unsplash.com/photo-1573770200393-d28efec99581?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80',
-    prob1: "Fish on the menu?",
+    image: 'https://images.unsplash.com/photo-1487252168646-fa0e87f6e83c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=808&q=80',
+    prob1: "1. Fish on the menu?",
     solu1: "The simple solution would be - leave fish off the menu . If you have a cantina or other kind of meal services. Don't serve fish. Try not substitute fish with other meats, but focus on climate friendly alternatives like plant based solutions",
-    prob2: "Fish HAVE to be on the menu",
+    prob2: "2. Fish HAVE to be on the menu",
     solu2: "Not all industries can leave out fish and seafood. Take the sushi industri. Fish is the main product. A way to combat overfishing of the seas would be to use land based fish farming. This solution also actively lessens water pollution and diseases.",
-    prob3: "Avoid building close to the ocean",
+    prob3: "3. Avoid building close to the ocean",
     solu3: "Even though laws have changed and you are allowed to build closer to the ocean than previously, one way your company can help life below water is by building at least 3 kilometers or 1.8 miles in lands and away from the shores. If possible build up instead of out.",
-    prob4: "Choose work uniforms that don't pollute",
+    prob4: "4. Choose work uniforms that don't pollute",
     solu4: "As much as 20% of ocean pollution comes from the clothing industry. Your company can actively contribute to the solution by using sustainable clothing brands like ENGEL or clothing not using polyester.",
     };
     this.genderEquality = {
@@ -270,16 +270,16 @@ export class AppComponent implements OnInit {
 
     this.genderEquality = {
       title: 'Gender Equality',
-      desc: 'Some Intro about Gender Equality',
-      image: 'https://miro.medium.com/max/720/1*a5h7AJISKYMspgWVmU5pYA.jpeg',
-      prob1: "",
-      solu1: '',
-      prob2: '',
-      solu2: '',
-      prob3: '',
-      solu3: '',
-      prob4: '',
-      solu4: '',
+      desc: "In the west, we like to think that we have closed the gap and inequality between the sexes. However, there is still a long way to go and many ways we can still improve. On a global basis, the entire world stands to earn an extra 12 trillion GDP a year, if all women were allowed to enter the workforce at the same level as men.",
+      image: 'https://images.unsplash.com/photo-1545693315-85b6be26a3d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+      prob1: "1. Improve performance with one tool ",
+      solu1: "With WEPs Gender Gap Analysis Tool your business can analyze and identify to analyze strengths, gaps, and how well your company handles equal pay, recruitment, supporting parents and caregivers, women's health, inclusive sourcing, and advocacy for gender equality.",
+      prob2: "2. Choose the right suppliers",
+      solu2: "As a business you have the obligation to know which of your suppliers are acting accordingly with regards to gender equality. Businesses that want to enhance sustainability in the world, should also choose suppliers that have the same goal.  ",
+      prob3: "3. Handling discrimination in the workplace",
+      solu3: "discrimination against women in industries should be taken very seriously. As a business it's not only a destructive environment for women but also the business and it will hurt everyone involved if not handled properly. Sage (her skal der være et link til Link 6) have identified 10 ways your business can actively use to eliminate gender biases.",
+      prob4: "4. Support NGOs",
+      solu4: "Businesses that want to contribute even more to Equality between men and women can donate to Ngos. We suggest donating to UN Women - An organization that support humanitarian work and stopping violence against women. Or Kvinderådet - This organization coaches businesses in equality both physically and online.",
     };
   }
 

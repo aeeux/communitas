@@ -11,8 +11,8 @@ ion-icon.md\:py-4.ikon.md.icon-large.hydrated {
 }
 
 .first {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 ul li {
@@ -31,4 +31,5 @@ ul li:hover {
 
 .ikon:hover {
   color: white;
+  cursor: pointer;
 }
