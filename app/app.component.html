@@ -1,7 +1,16 @@
+<ul
+  class="text-sm fixed z-30 xl:hidden bottom-0 mx-auto flex space-x-10 bg-white text-black p-5 w-full justify-center"
+>
+  <li>Quality Education</li>
+  <li>Infrastructure</li>
+  <li>Life Below Water</li>
+  <li>Gender Equality</li>
+</ul>
+
 <ion-app class="scroll">
-  <!-- Outman -->
-  <app-hero></app-hero>
-  <div class="">
+  <div class="bg-gradient-to-t from-black to-mainBlue">
+    <!-- Outman -->
+    <app-hero class="scroll h-screen"></app-hero>
     <ul
       class="z-30 fixed font-semibold text-xl hidden xl:block space-y-6 w-56 mt-16"
     >
@@ -22,8 +31,6 @@
         <img class="px-3" src="/assets/icon/arrow.svg" />
       </div>
     </ul>
-  </div>
-  <div class="bg-gradient-to-t from-black to-mainBlue">
     <div class="max-w-4xl mx-auto">
       <!-- Memis -->
       <app-intro [intro]="intro"></app-intro>
@@ -41,30 +48,3 @@
     </div>
   </div>
 </ion-app>
-
-<!-- <div class="p-5">
-  <button class="bg-red-500 py-5" (click)="changeText()">
-    {{ btnVal }}
-  </button>
-</div>
-
-<div class="z-50">
-  <div>
-    <ul class="font-semibold p-20 text-2xl hidden xl:block z-20">
-      <li class="">Quality Education</li>
-      <li class="">Infrastructure</li>
-      <li class="">Life Below Water</li>
-      <li class="">Gender Equality</li>
-    </ul>
-  </div>
-  <div>
-    <ul
-      class="text-sm xl:hidden top-0 mx-auto flex space-x-10 bg-white text-black p-5 w-full justify-center"
-    >
-      <li>Quality Education</li>
-      <li>Infrastructure</li>
-      <li>Life Below Water</li>
-      <li>Gender Equality</li>
-    </ul>
-  </div>
-</div> -->
