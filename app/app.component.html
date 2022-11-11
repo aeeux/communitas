@@ -1,6 +1,8 @@
-<ul class="font-semibold relative z-20 p-20 text-2xl hidden xl:block">
-  <li class="">Quality Education</li>
-  <li class="">Infrastructure</li>
+<ul
+  class="font-semibold relative z-20 p-20 text-2xl hidden xl:block bg-red-500"
+>
+  <li class="" (click)="QualityEducation()">Quality Education</li>
+  <li class="" (click)="Infrastructure()">Infrastructure</li>
   <li class="" (click)="LifeBelowWater()">Life Below Water</li>
   <li class="" (click)="GenderEquality()">Gender Equality</li>
 </ul>
@@ -16,8 +18,10 @@
 
       <!-- Andreas -->
       <app-content
-        [genderEquality]="genderEquality"
+        [qualityEducation]="qualityEducation"
+        [infrastructure]="infrastructure"
         [lifeBelowWater]="lifeBelowWater"
+        [genderEquality]="genderEquality"
       ></app-content>
 
       <!-- Brith -->
