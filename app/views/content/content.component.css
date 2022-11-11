@@ -1,13 +1,8 @@
-.containeren {
-  margin: 10px;
-  margin-top: none;
-}
-
 #tekst {
   font-size: 17px;
 }
 
-.containeren #overskrift {
+#overskrift {
   font-size: 255px;
   text-align: left;
   width: 100%;
@@ -27,7 +22,7 @@
   #overskrift {
     font-size: 32px;
   }
-  .containeren #tekst {
+  #tekst {
     font-size: 24px;
   }
 }
