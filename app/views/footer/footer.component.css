@@ -46,6 +46,10 @@ ion-row.row.md.hydrated {
   margin: 5px 0px 15px 0px;
 }
 
+ion-footer.mx-auto.mt-40.pt-24.ion-no-border.footer.md.footer-md.footer-toolbar-padding.hydrated {
+  margin-bottom: 0px !important;
+}
+
 
 
 @media screen and (min-width: 576px) {
@@ -60,6 +64,10 @@ ion-row.row.md.hydrated {
 
 ikoner {
   margin: 0px;
+}
+
+ion-footer.mx-auto.mt-40.pt-24.ion-no-border.footer.md.footer-md.footer-toolbar-padding.hydrated {
+  margin-bottom: 50px !important;
 }
 
 }
