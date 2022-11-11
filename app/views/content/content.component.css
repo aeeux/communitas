@@ -19,9 +19,11 @@
 
 
 .containeren #overskrift {
-  font-size: 33px;
+  font-size: 26px;
   text-align: left;
   width: 100%;
+  font-weight: 500;
+  margin-bottom: 13px;
   }
 
 
@@ -49,12 +51,17 @@ div#flex {
   margin: 20px 0px !important;
 }
 
+.pic.rounded-xl img {
+  border-radius: 4px;
+}
+
 
 
 @media screen and (min-width: 769px) {
 
   div#flex {
     display: flex;
+    margin-bottom: 30px;
   }
 
 .childContainer {
@@ -63,10 +70,15 @@ div#flex {
   text-align: justify;
 }
 
-.containeren #tekst {
-  font-size: 19px;
+.containeren #overskrift {
+  font-size:32px;
+  }
 
-}
+
+  .containeren #tekst {
+    font-size: 24px;
+
+  }
 
 }
 
