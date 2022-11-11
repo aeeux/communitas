@@ -1,22 +1,54 @@
-<ion-app class="bg-gradient-to-t from-zinc-900 to-zinc-700">
-  <div>
-    <ion-router-outlet>
-      
-      <ul class="font-semibold p-20 text-2xl hidden xl:block z-20">
-        <li class="">Quality Education</li>
-        <li class="">Infrastructure</li>
-        <li class="">Life Below Water</li>
-        <li class="">Gender Equality</li>
-      </ul>
+<ul class="font-semibold relative z-20 p-20 text-2xl hidden xl:block">
+  <li class="">Quality Education</li>
+  <li class="">Infrastructure</li>
+  <li class="" (click)="LifeBelowWater()">Life Below Water</li>
+  <li class="" (click)="GenderEquality()">Gender Equality</li>
+</ul>
 
-    </ion-router-outlet>
+<ion-app class="scroll">
+  <div class="bg-gradient-to-t from-zinc-900 to-zinc-700">
+    <!-- Outman -->
+    <app-hero></app-hero>
+
+    <div class="max-w-4xl mx-auto">
+      <!-- Memis -->
+      <app-intro></app-intro>
+
+      <!-- Andreas -->
+      <app-content
+        [genderEquality]="genderEquality"
+        [lifeBelowWater]="lifeBelowWater"
+      ></app-content>
+
+      <!-- Brith -->
+      <app-footer></app-footer>
+    </div>
   </div>
-  <ul
-    class="text-sm xl:hidden z-20 top-0 mx-auto flex space-x-10 bg-white text-black p-5 w-full justify-center"
-  >
-    <li>Quality Education</li>
-    <li>Infrastructure</li>
-    <li>Life Below Water</li>
-    <li>Gender Equality</li>
-  </ul>
 </ion-app>
+
+<!-- <div class="p-5">
+  <button class="bg-red-500 py-5" (click)="changeText()">
+    {{ btnVal }}
+  </button>
+</div>
+
+<div class="z-50">
+  <div>
+    <ul class="font-semibold p-20 text-2xl hidden xl:block z-20">
+      <li class="">Quality Education</li>
+      <li class="">Infrastructure</li>
+      <li class="">Life Below Water</li>
+      <li class="">Gender Equality</li>
+    </ul>
+  </div>
+  <div>
+    <ul
+      class="text-sm xl:hidden top-0 mx-auto flex space-x-10 bg-white text-black p-5 w-full justify-center"
+    >
+      <li>Quality Education</li>
+      <li>Infrastructure</li>
+      <li>Life Below Water</li>
+      <li>Gender Equality</li>
+    </ul>
+  </div>
+</div> -->
