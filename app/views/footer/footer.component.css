@@ -29,6 +29,6 @@ ul li:hover {
   padding-top: 0;
 }
 
-.h-screen {
-  height: 0;
+.ikon:hover {
+  color: white;
 }
