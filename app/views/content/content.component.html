@@ -1,73 +1,92 @@
-<div class="containeren">
-  <div id="flex" class="flex p-20">
-    <div class="childContainer">
+<ion-grid class="p-7 sm:p-20">
+  <ion-row>
+    <ion-col>
       <h2 id="overskrift">
         {{ lifeBelowWater.title }}
         {{ qualityEducation.title }}
         {{ infrastructure.title }}
         {{ genderEquality.title }}
       </h2>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
       <p id="tekst" class="text-white/70" id="tekst">
         {{ lifeBelowWater.desc }}
         {{ qualityEducation.desc }}
         {{ infrastructure.desc }}
         {{ genderEquality.desc }}
       </p>
-
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
       <div class="pic rounded-xl">
         <img src="{{ lifeBelowWater.image }}" alt="" />
         <img src="{{ qualityEducation.image }}" alt="" />
         <img src="{{ infrastructure.image }}" alt="" />
         <img src="{{ genderEquality.image }}" alt="" />
       </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <h2 id="overskrift" class="pt-16">
+      {{ lifeBelowWater.prob1 }}
+      {{ qualityEducation.prob1 }}
+      {{ infrastructure.prob1 }}
+      {{ genderEquality.prob1 }}
+    </h2>
+  </ion-row>
+  <ion-row>
+    <p id="tekst" class="text-white/70" id="tekst">
+      {{ lifeBelowWater.solu1 }}
+      {{ qualityEducation.solu1 }}
+      {{ infrastructure.solu1 }}
+      {{ genderEquality.solu1 }}
+    </p>
+  </ion-row>
+  <ion-row>
+    <h2 id="overskrift" class="pt-16">
+      {{ lifeBelowWater.prob2 }}
+      {{ qualityEducation.prob2 }}
+      {{ infrastructure.prob2 }}
+      {{ genderEquality.prob2 }}
+    </h2>
+  </ion-row>
+  <ion-row>
+    <p id="tekst" class="text-white/70" id="tekst">
+      {{ lifeBelowWater.solu2 }}
+      {{ qualityEducation.solu2 }}
+      {{ infrastructure.solu2 }}
+      {{ genderEquality.solu2 }}
+    </p>
+  </ion-row>
+  <ion-row>
+    <h2 id="overskrift" class="pt-16">
+      {{ lifeBelowWater.prob3 }}
+      {{ qualityEducation.prob3 }}
 
-      <h2 id="overskrift" class="pt-16">
-        {{ lifeBelowWater.prob1 }}
-        {{ qualityEducation.prob1 }}
-        {{ infrastructure.prob1 }}
-        {{ genderEquality.prob1 }}
-      </h2>
-      <p id="tekst" class="text-white/70" id="tekst">
-        {{ lifeBelowWater.solu1 }}
-        {{ qualityEducation.solu1 }}
-        {{ infrastructure.solu1 }}
-        {{ genderEquality.solu1 }}
-      </p>
-
-      <h2 id="overskrift" class="pt-16">
-        {{ lifeBelowWater.prob2 }}
-        {{ qualityEducation.prob2 }}
-        {{ infrastructure.prob2 }}
-        {{ genderEquality.prob2 }}
-      </h2>
-      <p id="tekst" class="text-white/70" id="tekst">
-        {{ lifeBelowWater.solu2 }}
-        {{ qualityEducation.solu2 }}
-        {{ infrastructure.solu2 }}
-        {{ genderEquality.solu2 }}
-      </p>
-
-      <h2 id="overskrift" class="pt-16">
-        {{ lifeBelowWater.prob3 }}
-        {{ qualityEducation.prob3 }}
-
-        {{ genderEquality.prob3 }}
-      </h2>
-      <p id="tekst" class="text-white/70" id="tekst">
-        {{ lifeBelowWater.solu3 }}
-        {{ qualityEducation.solu3 }}
-        {{ genderEquality.solu3 }}
-      </p>
-
-      <h2 id="overskrift" class="pt-16">
-        {{ lifeBelowWater.prob4 }}
-        {{ genderEquality.prob4 }}
-      </h2>
-      <p id="tekst" class="text-white/70" id="tekst">
-        {{ lifeBelowWater.solu4 }}
-        {{ genderEquality.solu4 }}
-      </p>
-    </div>
-    <div class="pic rounded-xl"></div>
-  </div>
-</div>
+      {{ genderEquality.prob3 }}
+    </h2>
+  </ion-row>
+  <ion-row>
+    <p id="tekst" class="text-white/70" id="tekst">
+      {{ lifeBelowWater.solu3 }}
+      {{ qualityEducation.solu3 }}
+      {{ genderEquality.solu3 }}
+    </p>
+  </ion-row>
+  <ion-row>
+    <h2 id="overskrift" class="pt-16">
+      {{ lifeBelowWater.prob4 }}
+      {{ genderEquality.prob4 }}
+    </h2>
+  </ion-row>
+  <ion-row>
+    <p id="tekst" class="text-white/70" id="tekst">
+      {{ lifeBelowWater.solu4 }}
+      {{ genderEquality.solu4 }}
+    </p>
+  </ion-row>
+  <div class="pic rounded-xl"></div>
+</ion-grid>
