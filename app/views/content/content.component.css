@@ -11,11 +11,9 @@
   margin-top: none;
 }
 
-.childContainer #tekst {
+#tekst {
   font-size: 17px;
 }
-
-
 
 .containeren #overskrift {
   font-size: 255px;
@@ -23,10 +21,10 @@
   width: 100%;
   font-weight: 500;
   margin-bottom: 13px;
-  }
- #overskrift {
+}
+#overskrift {
   font-size: 25px;
-  }
+}
 .pic {
   margin: 20px 0px !important;
 }
@@ -34,14 +32,10 @@
   border-radius: 4px;
 }
 @media screen and (min-width: 769px) {
-
   #overskrift {
-  font-size:32px;
+    font-size: 32px;
   }
   .containeren #tekst {
     font-size: 24px;
-
   }
-
 }
-
