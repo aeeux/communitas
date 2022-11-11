@@ -7,7 +7,14 @@ import { loadingController } from '@ionic/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  genderEquality = {
+  qualityEducation = {
+    title: '',
+    intro: '',
+    image: '',
+    body: '',
+  };
+
+  infrastructure = {
     title: '',
     intro: '',
     image: '',
@@ -21,14 +28,66 @@ export class AppComponent implements OnInit {
     body: '',
   };
 
-  GenderEquality() {
-    this.genderEquality = {
-      title: 'Gender Equality',
-      intro: 'Some Intro about Gender Equality',
+  genderEquality = {
+    title: '',
+    intro: '',
+    image: '',
+    body: '',
+  };
+
+  QualityEducation() {
+    this.qualityEducation = {
+      title: 'Quality Education',
+      intro: 'Some Intro about Quality Education',
       image: 'https://miro.medium.com/max/720/1*a5h7AJISKYMspgWVmU5pYA.jpeg',
-      body: 'main text body of something about Gender Equality',
+      body: 'main text body of something about Quality Education',
     };
+
+    this.infrastructure = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+
     this.lifeBelowWater = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+
+    this.genderEquality = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+  }
+
+  Infrastructure() {
+    this.qualityEducation = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+
+    this.infrastructure = {
+      title: 'Infrastructure',
+      intro: 'Some Intro about Infrastructure',
+      image: 'https://miro.medium.com/max/720/1*a5h7AJISKYMspgWVmU5pYA.jpeg',
+      body: 'main text body of something about Infrastructure',
+    };
+
+    this.lifeBelowWater = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+
+    this.genderEquality = {
       title: '',
       intro: '',
       image: '',
@@ -37,7 +96,13 @@ export class AppComponent implements OnInit {
   }
 
   LifeBelowWater() {
-    this.genderEquality = {
+    this.qualityEducation = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+    this.infrastructure = {
       title: '',
       intro: '',
       image: '',
@@ -48,6 +113,42 @@ export class AppComponent implements OnInit {
       intro: 'Some Intro about Life Below Water',
       image: 'https://miro.medium.com/max/720/1*a5h7AJISKYMspgWVmU5pYA.jpeg',
       body: 'main text body of something about Life Below Water',
+    };
+    this.genderEquality = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+  }
+
+  GenderEquality() {
+    this.qualityEducation = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+
+    this.infrastructure = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+
+    this.lifeBelowWater = {
+      title: '',
+      intro: '',
+      image: '',
+      body: '',
+    };
+
+    this.genderEquality = {
+      title: 'Gender Equality',
+      intro: 'Some Intro about Gender Equality',
+      image: 'https://miro.medium.com/max/720/1*a5h7AJISKYMspgWVmU5pYA.jpeg',
+      body: 'main text body of something about Gender Equality',
     };
   }
 
