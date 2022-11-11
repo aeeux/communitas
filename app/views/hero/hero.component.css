@@ -19,7 +19,6 @@ ion-text.brødtekst h2 {
   font-size: 45px;
   color: white;
   margin-top: 10px;
-  width: 300px;
   font-family: 'lora', serif;
 }
 
@@ -31,7 +30,7 @@ ion-text.brødtekst h2 {
 .fancyText p{
   color: white;
   border-bottom: 1px solid white;
-  margin-top: 70px;
+  margin-top: 50px;
   padding-bottom: 10px;
   font-family:  Helvetica, sans-serif;
   font-size: 20px !important;
@@ -71,7 +70,6 @@ video.video {
 
   ion-text.brødtekst h2 {
     font-size: 55px;
-    width: 350px;
   }
 
 
@@ -87,7 +85,6 @@ video.video {
 
   ion-text.brødtekst h2 {
     font-size: 65px;
-    width: 450px;
   }
 
   .fancyText p {
