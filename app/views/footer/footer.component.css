@@ -19,4 +19,20 @@ ion-icon.md\:py-4.ikon.md.icon-large.hydrated {
   font-weight: bold;
 }
 
+ul li {
+  margin: 5px 0px;
+}
 
+
+ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.pt-24 {
+  padding-top: 0;
+}
+
+.h-screen {
+  height: 0;
+}
