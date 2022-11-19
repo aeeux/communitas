@@ -12,11 +12,12 @@ app.use(bodyparser.json());
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "root",
+  password: "",
   database: "everywell",
   port: 3306,
 });
 
+//get all users data
 app.get("/users", (req, res) => {
   let users = "SELECT * FROM users";
 
@@ -58,7 +59,70 @@ app.get("/users/:id", (req, res) => {
   });
 });
 
-// app.create();
+//create data
+app.post("/article", (req, res) => {
+  console.log(req.body, "postdata");
+
+  let idarticle = req.body.idarticle;
+  let title = req.body.title;
+  let desc = req.body.desc;
+  let image = req.body.image;
+  let prob1 = req.body.prob1;
+  let solu1 = req.body.solu1;
+  let prob2 = req.body.prob2;
+  let solu2 = req.body.solu2;
+  let prob3 = req.body.prob3;
+  let solu3 = req.body.solu3;
+  let prob4 = req.body.prob4;
+  let solu4 = req.body.solu4;
+
+  let qry = `INSERT INTO article(idarticle, title, desc, image, prob1, solu1, prob2, solu2, prob3, solu3, prob4, solu4) 
+            VALUES( "${idarticle}", "${title}", "${desc}", "${image}", "${prob1}", "${solu1}", "${prob2}", "${solu2}","${prob3}", "${solu3}", "${prob4}", "${solu4}")`;
+
+  db.query(qry, (err, result) => {
+    if (err) {
+      console.log(err);
+    }
+    console.log(result, "result");
+    res.send({
+      message: "Article Data Inserted Successfully!",
+    });
+  });
+});
+
+//update data
+app.put("article/:id", (req, res) => {
+  let title = req.body.title;
+  let desc = req.body.desc;
+  let image = req.body.image;
+  let prob1 = req.body.prob1;
+  let solu1 = req.body.solu1;
+  let prob2 = req.body.prob2;
+  let solu2 = req.body.solu2;
+  let prob3 = req.body.prob3;
+  let solu3 = req.body.solu3;
+  let prob4 = req.body.prob4;
+  let solu4 = req.body.solu4;
+
+  let aID = req.params.id;
+
+  let qry = `UPDATE article set title = '${title}', desc = '${desc}', image = '${image}', prob1 = '${prob1}', solu1 = '${solu1}', prob2 = '${prob2}', solu2 = '${solu2}', prob3 = '${prob3}', solu3 = '${solu3}'
+            WHERE id = ${aID}
+  `;
+
+  console.log(req.body, "update article data");
+
+  db.query(qry, (err, result) => {
+    if (err) {
+      console.log(err);
+    }
+
+    res.send({
+      message: "Article Data Updated!",
+      // data: result,
+    });
+  });
+});
 
 // app.read();
 
