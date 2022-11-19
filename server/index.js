@@ -63,9 +63,8 @@ app.get("/users/:id", (req, res) => {
 app.post("/article", (req, res) => {
   console.log(req.body, "postdata");
 
-  let idarticle = req.body.idarticle;
   let title = req.body.title;
-  let desc = req.body.desc;
+  let descr = req.body.descr;
   let image = req.body.image;
   let prob1 = req.body.prob1;
   let solu1 = req.body.solu1;
@@ -76,8 +75,8 @@ app.post("/article", (req, res) => {
   let prob4 = req.body.prob4;
   let solu4 = req.body.solu4;
 
-  let qry = `INSERT INTO article(idarticle, title, desc, image, prob1, solu1, prob2, solu2, prob3, solu3, prob4, solu4) 
-            VALUES( "${idarticle}", "${title}", "${desc}", "${image}", "${prob1}", "${solu1}", "${prob2}", "${solu2}","${prob3}", "${solu3}", "${prob4}", "${solu4}")`;
+  let qry = `INSERT INTO article(title, descr, image, prob1, solu1, prob2, solu2, prob3, solu3, prob4, solu4) 
+            VALUES("${title}", "${descr}", "${image}", "${prob1}", "${solu1}", "${prob2}", "${solu2}","${prob3}", "${solu3}", "${prob4}", "${solu4}")`;
 
   db.query(qry, (err, result) => {
     if (err) {
