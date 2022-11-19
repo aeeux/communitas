@@ -17,29 +17,29 @@ const db = mysql.createConnection({
   port: 3306,
 });
 
-//get all users data
-app.get("/users", (req, res) => {
-  let users = "SELECT * FROM users";
+//get all article data
+app.get("/article", (req, res) => {
+  let qry = "SELECT * FROM article";
 
-  db.query(users, (err, result) => {
+  db.query(qry, (err, result) => {
     if (err) {
-      console.log(err, "error in users");
+      console.log(err, "error in articles");
     }
 
     if (result.length > 0) {
       res.send({
-        message: "all users data received",
+        message: "all qry data received from * article",
         data: result,
       });
     }
   });
 });
 
-//get single data
-app.get("/users/:id", (req, res) => {
-  let uID = req.params.id;
+//get single article data
+app.get("/article/:id", (req, res) => {
+  let aID = req.params.id;
 
-  let qry = `SELECT * FROM users WHERE idusers = ${uID}`;
+  let qry = `SELECT * FROM article WHERE idarticle = ${aID}`;
 
   db.query(qry, (err, result) => {
     if (err) {
@@ -48,7 +48,7 @@ app.get("/users/:id", (req, res) => {
 
     if (result.length > 0) {
       res.send({
-        message: "single user data",
+        message: "single article data",
         data: result,
       });
     } else {
@@ -91,8 +91,10 @@ app.post("/article", (req, res) => {
 
 //update data
 app.put("article/:id", (req, res) => {
+  let aID = req.params.id;
+
   let title = req.body.title;
-  let desc = req.body.desc;
+  let descr = req.body.descr;
   let image = req.body.image;
   let prob1 = req.body.prob1;
   let solu1 = req.body.solu1;
@@ -103,10 +105,8 @@ app.put("article/:id", (req, res) => {
   let prob4 = req.body.prob4;
   let solu4 = req.body.solu4;
 
-  let aID = req.params.id;
-
-  let qry = `UPDATE article set title = '${title}', desc = '${desc}', image = '${image}', prob1 = '${prob1}', solu1 = '${solu1}', prob2 = '${prob2}', solu2 = '${solu2}', prob3 = '${prob3}', solu3 = '${solu3}'
-            WHERE id = ${aID}
+  let qry = `UPDATE article set title = '${title}', descr = '${descr}', image = '${image}', prob1 = '${prob1}', solu1 = '${solu1}', prob2 = '${prob2}', solu2 = '${solu2}', prob3 = '${prob3}', solu3 = '${solu3}'
+  WHERE id = ${aID}
   `;
 
   console.log(req.body, "update article data");
