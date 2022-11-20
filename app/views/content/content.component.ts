@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from 'app/api/ApiService';
 
 @Component({
   selector: 'app-content',
@@ -11,8 +12,15 @@ export class ContentComponent implements OnInit {
   @Input() lifeBelowWater;
   @Input() genderEquality;
 
-  //lifeBelowWater: Array<string>
-  constructor() {}
+  constructor(private service: ApiService) {}
 
-  ngOnInit() {}
+  readData: any;
+
+  ngOnInit() {
+    this.service.getAllArticleData().subscribe((res) => {
+      console.log(res, 'res ==>');
+
+      this.readData = res.data;
+    });
+  }
 }
