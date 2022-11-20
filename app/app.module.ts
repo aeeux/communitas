@@ -13,6 +13,9 @@ import { HeroComponent } from './views/hero/hero.component';
 import { HomeComponent } from './views/home/home.component';
 import { IntroComponent } from './views/intro/intro.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './api/ApiService';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +30,12 @@ import { IntroComponent } from './views/intro/intro.component';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    ApiService,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
