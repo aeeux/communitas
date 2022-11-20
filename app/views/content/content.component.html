@@ -1,7 +1,9 @@
 <ion-grid class="p-7 sm:p-20">
   <ion-row>
     <ion-col>
-      <h2 id="overskrift">
+      <h2 *ngFor="let data of readData" id="overskrift">
+        {{ data.idarticle }}
+        {{ data.title }}
         {{ lifeBelowWater.title }}
         {{ qualityEducation.title }}
         {{ infrastructure.title }}
