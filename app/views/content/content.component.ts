@@ -43,6 +43,11 @@ export class ContentComponent implements OnInit {
   articleSubmit() {
     if (this.articleForm.valid) {
       console.log(this.articleForm.value);
+      this.service
+        .createArticleData(this.articleForm.value)
+        .subscribe((res) => {
+          console.log(res, 'Res ===>');
+        });
     } else {
       this.errormsg = 'all fields are required!';
     }
