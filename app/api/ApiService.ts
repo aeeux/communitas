@@ -18,7 +18,8 @@ export class ApiService {
   }
 
   //Create
-  createData(data: any): Observable<any> {
+  createArticleData(data: any): Observable<any> {
+    console.log(data, 'create');
     return this._http.post(`${this.apiUrl}`, data);
   }
 
