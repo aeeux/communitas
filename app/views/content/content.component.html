@@ -1,9 +1,59 @@
 <ion-grid class="p-7 sm:p-20">
+  <div
+    class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+    role="alert"
+  >
+    <strong class="font-bold"
+      >Holy smokes! <br />
+      {{ errormsg }}</strong
+    >
+    <span class="block sm:inline">Something seriously bad happened.</span>
+  </div>
+
+  <form [formGroup]="articleForm" (ngSubmit)="articleSubmit()">
+    <div>
+      <input type="text" placeholder="title" formControlName="title" />
+    </div>
+    <div>
+      <input type="text" placeholder="description" formControlName="descr" />
+    </div>
+    <div>
+      <input type="text" placeholder="image" formControlName="image" />
+    </div>
+    <div>
+      <input type="text" placeholder="prob1" formControlName="prob1" />
+    </div>
+    <div>
+      <input type="text" placeholder="solu1" formControlName="solu1" />
+    </div>
+    <div>
+      <input type="text" placeholder="prob2" formControlName="prob2" />
+    </div>
+    <div>
+      <input type="text" placeholder="solu2" formControlName="solu2" />
+    </div>
+    <div>
+      <input type="text" placeholder="prob3" formControlName="prob3" />
+    </div>
+    <div>
+      <input type="text" placeholder="solu3" formControlName="solu3" />
+    </div>
+    <div>
+      <input type="text" placeholder="prob4" formControlName="prob4" />
+    </div>
+    <div>
+      <input type="text" placeholder="solu4" formControlName="solu4" />
+    </div>
+    <div>
+      <button class="bg-blue-500 px-3 py-1 w-full" type="submit">create</button>
+    </div>
+  </form>
   <ion-row>
     <ion-col>
       <h2 *ngFor="let data of readData" id="overskrift">
         {{ data.idarticle }}
         {{ data.title }}
+        {{ data.descr }}
         {{ lifeBelowWater.title }}
         {{ qualityEducation.title }}
         {{ infrastructure.title }}
