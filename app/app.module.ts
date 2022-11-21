@@ -16,6 +16,8 @@ import { IntroComponent } from './views/intro/intro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api/ApiService';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,8 @@ import { ApiService } from './api/ApiService';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     ApiService,
