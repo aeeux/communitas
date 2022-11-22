@@ -11,6 +11,7 @@ export class ApiService {
   //    connect frontend to backend server
 
   apiUrl = 'http://localhost:3000/article';
+  apiUrlAccounts = 'http://localhost:3000/accounts';
 
   //get all article data
   getAllArticleData(): Observable<any> {
@@ -21,6 +22,12 @@ export class ApiService {
   createArticleData(data: any): Observable<any> {
     console.log(data, 'create');
     return this._http.post(`${this.apiUrl}`, data);
+  }
+
+  //Create
+  postAccountData(data: any, prop: any): Observable<any> {
+    console.log(data, 'post');
+    return this._http.post(`${this.apiUrlAccounts}`, data, prop);
   }
 
   //get article data for params /:id (1)
