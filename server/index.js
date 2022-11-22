@@ -4,9 +4,18 @@ const cors = require("cors");
 const mysql = require("mysql");
 
 const app = express();
-
-app.use(cors());
+app.use(cors({ credentials: true, origin: "http://localhost:8100" }));
 app.use(bodyparser.json());
+
+//CORS SETTINGS FOR HEADERS
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:8100"); // update to match the domain you will make the request from
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 // db connection
 const db = mysql.createConnection({
@@ -123,7 +132,7 @@ app.put("article/:id", (req, res) => {
   });
 });
 
-app.get("/accounts", (req, res) => {
+app.post("/accounts", (req, res) => {
   let qry = "SELECT * FROM accounts";
 
   db.query(qry, (err, result) => {
