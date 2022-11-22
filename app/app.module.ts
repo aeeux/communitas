@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api/ApiService';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './views/admin/admin/admin.component';
+import { AdminpageComponent } from './views/adminpage/adminpage.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeroComponent,
     HomeComponent,
     IntroComponent,
+    AdminComponent,
+    AdminpageComponent
   ],
   imports: [
     CommonModule,
