@@ -34,3 +34,8 @@ ion-card {
   opacity: 1;
   box-shadow: none !important;
 }
+ion-item {
+  --border-color: white; // default underline color
+  --highlight-color-invalid: red; // invalid underline color
+  --highlight-color-valid:  green; // valid underline color
+}
