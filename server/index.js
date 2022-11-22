@@ -148,6 +148,22 @@ app.post("/accounts", (req, res) => {
   });
 });
 
+app.get("/accounts", (req, res) => {
+  let qry = "SELECT * FROM accounts";
+
+  db.query(qry, (err, result) => {
+    if (err) {
+      console.log(err, "error in accounts");
+    }
+    if (result.length > 0) {
+      res.send({
+        message: "all qry data received from * accounts",
+        data: result,
+      });
+    }
+  });
+});
+
 // app.read();
 
 // app.update();
