@@ -1,13 +1,19 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const cors = require("cors");
-const mysql = require("mysql");
+const userRouter = require("./users/user.router");
+require("dotenv").config();
+const db = require("./config/database");
 
 const app = express();
-app.use(cors({ credentials: true, origin: "http://localhost:8100" }));
-app.use(bodyparser.json());
 
-//CORS SETTINGS FOR HEADERS
+app.use("/token/accounts", userRouter);
+
+// app.use(cors({ credentials: true, origin: "http://localhost:8100" }));
+// app.use(bodyparser.json());
+
+/* 
+CORS SETTINGS FOR HEADERS
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:8100"); // update to match the domain you will make the request from
   res.header(
@@ -16,15 +22,7 @@ app.use(function (req, res, next) {
   );
   next();
 });
-
-// db connection
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "everywell",
-  port: 3306,
-});
+*/
 
 //get all article data
 app.get("/article", (req, res) => {
@@ -171,13 +169,7 @@ app.get("/accounts", (req, res) => {
 // app.delete();
 
 // check db connection
-db.connect((err) => {
-  if (err) {
-    console.log(err, "db err");
-  }
-  console.log("database connected...");
-});
 
 app.listen(3000, () => {
-  console.log("Server Is Running..");
+  console.log("Server Is Running :");
 });
