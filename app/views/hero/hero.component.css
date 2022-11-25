@@ -52,6 +52,25 @@ ion-text.brødtekst h2 {
   font-size: 20px;
   color: white;
 }
+.logoo {
+  width: 50%;
+}
+
+.btns {
+  width: 50%;
+  text-align: end;
+}
+
+.navBar {
+  position: absolute;
+  top: 20px;
+  padding-left: 20px;
+  width: 100%;
+  display: flex;
+  padding-right: 20px;
+  font-size: 20px;
+  color: white;
+}
 
 .tekst {
   padding-left: 20px;
