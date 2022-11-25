@@ -1,157 +1,241 @@
 <ion-grid class="bg-gradient-to-t from-black to-mainBlue">
-<ul *ngIf="auth.user$ | async as user">
-  <ion-title class="px-7 sm:px-20 md:mx-40 py-20">Welcome {{ user.name }}</ion-title>
-  
-</ul>
+  <ul *ngIf="auth.user$ | async as user">
+    <ion-title class="px-7 sm:px-20 md:mx-40 py-20"
+      >Welcome {{ user.name }}</ion-title
+    >
+  </ul>
+  <form [formGroup]="articleForm" (ngSubmit)="articleSubmit()">
+    <ion-grid class="px-7 sm:px-20 md:mx-40">
+      <ion-row class="flex">
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0">Title</ion-title>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="">
+        <ion-col size="6" class="">
+          <ion-textarea
+            formControlName="title"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded"
+            placeholder="Der skal stå noget her"
+          ></ion-textarea>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="px-7 sm:px-20 md:mx-40">
+      <ion-row class="flex">
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0">Description</ion-title>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pb-5">
+        <ion-col size="6" class="">
+          <ion-textarea
+            formControlName="descr"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded"
+            placeholder="Der skal stå noget her"
+          ></ion-textarea>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="px-7 sm:px-20 md:mx-40">
+      <ion-row class="flex">
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0">Image URL</ion-title>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pb-5">
+        <ion-col size="6" class="">
+          <ion-textarea
+            formControlName="image"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded"
+            placeholder="Der skal stå noget her"
+          ></ion-textarea>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-<ion-grid class="px-7 sm:px-20 md:mx-40">
-  <ion-row class="flex">
-    <ion-col>
-      <ion-text>
-        <ion-title class="p-0">Titel</ion-title>
-      </ion-text>
-    </ion-col>
-  </ion-row>
-  <ion-row class="">
-    <ion-col size="6" class="">
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded"  placeholder="Der skal stå noget her"></ion-textarea>
-    </ion-col>
-  </ion-row>  
-</ion-grid>
-<ion-grid class="px-7 sm:px-20 md:mx-40">
-  <ion-row class="flex">
-    <ion-col>
-      <ion-text>
-        <ion-title class="p-0">Description</ion-title>
-      </ion-text>
-    </ion-col>
-  </ion-row>
-  <ion-row class="pb-5">
-    <ion-col size="6" class="">
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded"  placeholder="Der skal stå noget her"></ion-textarea>
-    </ion-col>
-  </ion-row>  
-</ion-grid>
+    <ion-grid class="px-7 sm:px-20 md:mx-40">
+      <ion-row class="flex">
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0">Problem 1</ion-title>
+          </ion-text>
+        </ion-col>
+        <ion-col class="">
+          <ion-text>
+            <ion-title class="p-0 md:ml-8">Solution 1</ion-title>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pb-5">
+        <ion-col class="mr-5">
+          <ion-textarea
+            formControlName="prob1"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded"
+            placeholder="Many companies eventually get to a point 
+        where future work depends on new solutions 
+        and skills in the workforce. However, that 
+        doesn't mean that your business is able...
+        "
+          ></ion-textarea>
+        </ion-col>
+        <ion-col>
+          <ion-textarea
+            formControlName="solu1"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded md:ml-5"
+            placeholder="Der skal stå noget her"
+          ></ion-textarea>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-<ion-grid class="px-7 sm:px-20 md:mx-40">
-  <ion-row class="flex">
-    <ion-col>
-      <ion-text>
-        <ion-title class="p-0">Problem 1</ion-title>
-      </ion-text>
-    </ion-col>
-    <ion-col class="">
-      <ion-text>
-        <ion-title class="p-0 md:ml-8">Solution 1</ion-title>
-      </ion-text>
-    </ion-col>
-  </ion-row>
-  <ion-row class="pb-5">
-    <ion-col class="mr-5">
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded " placeholder="Many companies eventually get to a point 
-      where future work depends on new solutions 
-      and skills in the workforce. However, that 
-      doesn't mean that your business is able...
-      "></ion-textarea>
-    </ion-col>
-    <ion-col >
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded md:ml-5"  placeholder="Der skal stå noget her"></ion-textarea>
-    </ion-col>
-  </ion-row>  
-</ion-grid>
+    <ion-grid class="px-7 sm:px-20 md:mx-40">
+      <ion-row class="flex">
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0">Problem 2</ion-title>
+          </ion-text>
+        </ion-col>
+        <ion-col class="">
+          <ion-text>
+            <ion-title class="p-0 md:ml-8">Solution 2</ion-title>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pb-5">
+        <ion-col class="mr-5">
+          <ion-textarea
+            formControlName="prob2"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded"
+            placeholder="Many companies eventually get to a point 
+        where future work depends on new solutions 
+        and skills in the workforce. However, that 
+        doesn't mean that your business is able...
+        "
+          ></ion-textarea>
+        </ion-col>
+        <ion-col>
+          <ion-textarea
+            formControlName="solu2"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded md:ml-5"
+            placeholder="Der skal stå noget her"
+          ></ion-textarea>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-<ion-grid class="px-7 sm:px-20 md:mx-40">
-  <ion-row class="flex">
-    <ion-col>
-      <ion-text>
-        <ion-title class="p-0">Problem 2</ion-title>
-      </ion-text>
-    </ion-col>
-    <ion-col class="">
-      <ion-text>
-        <ion-title class="p-0 md:ml-8">Solution 2</ion-title>
-      </ion-text>
-    </ion-col>
-  </ion-row>
-  <ion-row class="pb-5">
-    <ion-col class="mr-5">
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded" placeholder="Many companies eventually get to a point 
-      where future work depends on new solutions 
-      and skills in the workforce. However, that 
-      doesn't mean that your business is able...
-      "></ion-textarea>
-    </ion-col>
-    <ion-col >
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded md:ml-5"  placeholder="Der skal stå noget her"></ion-textarea>
-    </ion-col>
-  </ion-row>  
-</ion-grid>
+    <ion-grid class="px-7 sm:px-20 md:mx-40">
+      <ion-row class="flex">
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0">Problem 3</ion-title>
+          </ion-text>
+        </ion-col>
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0 md:ml-8">Solution 3</ion-title>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pb-5">
+        <ion-col class="mr-5">
+          <ion-textarea
+            formControlName="prob3"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded"
+            placeholder="Many companies eventually get to a point 
+        where future work depends on new solutions 
+        and skills in the workforce. However, that 
+        doesn't mean that your business is able...
+        "
+          ></ion-textarea>
+        </ion-col>
+        <ion-col>
+          <ion-textarea
+            formControlName="solu3"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded md:ml-5"
+            placeholder="Der skal stå noget her"
+          ></ion-textarea>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-<ion-grid class="px-7 sm:px-20 md:mx-40">
-  <ion-row class="flex">
-    <ion-col>
-      <ion-text>
-        <ion-title class="p-0">Problem 3</ion-title>
-      </ion-text>
-    </ion-col>
-    <ion-col>
-      <ion-text>
-        <ion-title class="p-0 md:ml-8">Solution 3</ion-title>
-      </ion-text>
-    </ion-col>
-  </ion-row>
-  <ion-row class="pb-5">
-    <ion-col class="mr-5">
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded" placeholder="Many companies eventually get to a point 
-      where future work depends on new solutions 
-      and skills in the workforce. However, that 
-      doesn't mean that your business is able...
-      "></ion-textarea>
-    </ion-col>
-    <ion-col >
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded md:ml-5"  placeholder="Der skal stå noget her"></ion-textarea>
-    </ion-col>
-  </ion-row>  
-</ion-grid>
+    <ion-grid class="px-7 sm:px-20 md:mx-40">
+      <ion-row class="flex">
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0">Problem 4</ion-title>
+          </ion-text>
+        </ion-col>
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0 md:ml-8">Solution 4</ion-title>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pb-5">
+        <ion-col class="mr-5">
+          <ion-textarea
+            formControlName="prob4"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded"
+            placeholder="Many companies eventually get to a point 
+        where future work depends on new solutions 
+        and skills in the workforce. However, that 
+        doesn't mean that your business is able...
+        "
+          ></ion-textarea>
+        </ion-col>
+        <ion-col>
+          <ion-textarea
+            formControlName="solu4"
+            expand="block"
+            fill="outline"
+            class="bg-mainBlue rounded md:ml-5"
+            placeholder="Der skal stå noget her"
+          ></ion-textarea>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-<ion-grid class="px-7 sm:px-20 md:mx-40">
-  <ion-row class="flex">
-    <ion-col>
-      <ion-text>
-        <ion-title class="p-0">Problem 4</ion-title>
-      </ion-text>
-    </ion-col>
-    <ion-col>
-      <ion-text>
-        <ion-title class="p-0 md:ml-8">Solution 4</ion-title>
-      </ion-text>
-    </ion-col>
-  </ion-row>
-  <ion-row class="pb-5">
-    <ion-col class="mr-5">
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded" placeholder="Many companies eventually get to a point 
-      where future work depends on new solutions 
-      and skills in the workforce. However, that 
-      doesn't mean that your business is able...
-      "></ion-textarea>
-    </ion-col>
-    <ion-col >
-      <ion-textarea expand="block" fill="outline" class="bg-mainBlue rounded md:ml-5"  placeholder="Der skal stå noget her"></ion-textarea>
-    </ion-col>
-  </ion-row>  
-</ion-grid>
+    <ion-grid class="px-7 sm:px-20 md:mx-40">
+      <ion-row class="">
+        <ion-col size="2">
+          <ion-button class="mx-5" type="submit" expand="block" fill="outline"
+            >Create
+          </ion-button>
+        </ion-col>
 
-
-<ion-grid class="px-7 sm:px-20 md:mx-40">
-  <ion-row class="">
-    <ion-col size="2">
-      <ion-button class="mx-5" type="submit" expand="block" fill="outline">Create
-      </ion-button>
-    </ion-col>
-
-    <ion-col class="" size="2">
-      <ion-button  type="button" class=""  (click)="logout()">Sign out</ion-button>
-    </ion-col>
-  </ion-row> 
-</ion-grid>
+        <ion-col class="" size="2">
+          <ion-button type="button" class="" (click)="logout()"
+            >Sign out</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 </ion-grid>
