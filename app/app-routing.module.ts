@@ -4,6 +4,7 @@ import { HomeComponent } from './views/home/home.component';
 import { AdminpageComponent } from './views/adminpage/adminpage.component';
 import { ReadComponent } from './views/read/read.component';
 import { UpdateComponent } from './views/update/update.component';
+import { CreateComponent } from './views/create/create.component';
 // Import the authentication guard
 import { AuthGuard } from '@auth0/auth0-angular';
 
@@ -20,12 +21,12 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'read',
-    component: ReadComponent,
+    path: 'create',
+    component: CreateComponent,
   },
   {
-    path: 'update',
-    component: UpdateComponent,
+    path: 'read',
+    component: ReadComponent,
   },
 ];
 
