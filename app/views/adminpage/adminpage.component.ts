@@ -27,32 +27,4 @@ export class AdminpageComponent implements OnInit {
   }
 
   readData: any;
-  errormsg: any;
-
-  articleForm = new FormGroup({
-    title: new FormControl('', Validators.required),
-    descr: new FormControl('', Validators.required),
-    image: new FormControl('', Validators.required),
-    prob1: new FormControl(''),
-    solu1: new FormControl(''),
-    prob2: new FormControl(''),
-    solu2: new FormControl(''),
-    prob3: new FormControl(''),
-    solu3: new FormControl(''),
-    prob4: new FormControl(''),
-    solu4: new FormControl(''),
-  });
-
-  articleSubmit() {
-    if (this.articleForm.valid) {
-      console.log(this.articleForm.value);
-      this.service
-        .createArticleData(this.articleForm.value)
-        .subscribe((res) => {
-          console.log(res, 'Res ===>');
-        });
-    } else {
-      this.errormsg = 'all fields are required!';
-    }
-  }
 }
