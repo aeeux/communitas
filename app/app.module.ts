@@ -19,7 +19,8 @@ import { ApiService } from './api/ApiService';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './views/admin/admin/admin.component';
 import { AdminpageComponent } from './views/adminpage/adminpage.component';
-
+// Import the module from the SDK
+import { AuthModule } from '@auth0/auth0-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,11 @@ import { AdminpageComponent } from './views/adminpage/adminpage.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+       // Import the module into the application, with configuration
+       AuthModule.forRoot({
+        domain: 'dev-8ywcl6gfku8jyt8i.us.auth0.com',
+        clientId: 'D12NTCfFxOPcYvSNKfrg0kRcf7OD1cpC'
+      }),
   ],
   providers: [
     ApiService,
