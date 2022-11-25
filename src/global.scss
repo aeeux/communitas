@@ -39,3 +39,19 @@ ion-item {
   --highlight-color-invalid: red; // invalid underline color
   --highlight-color-valid:  green; // valid underline color
 }
+
+ion-button{
+  --background: #090c0d !important;
+  --border-color: #6d7578;
+  --color: #6d7578;
+  --color-hover:
+}
+
+ion-input{
+  --border-color: #273137;
+}
+
+ion-title {
+  --color: #d9d9d9;
+  font-size: 25px;
+}
