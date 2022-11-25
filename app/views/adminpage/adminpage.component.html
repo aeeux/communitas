@@ -4,6 +4,17 @@
       >Welcome {{ user.name }}</ion-title
     >
   </ul>
+
+  <ion-list class="w-56 float-right mr-56 bg-white/0">
+    <ion-item>
+      <ion-select class="text-white" placeholder="Select Article">
+        <ion-select-option value="{{ data.title }}">{{
+          data.title
+        }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
   <form [formGroup]="articleForm" (ngSubmit)="articleSubmit()">
     <ion-grid class="px-7 sm:px-20 md:mx-40">
       <ion-row class="flex">
