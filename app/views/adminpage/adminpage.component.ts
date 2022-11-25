@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Emitters } from 'app/emitters/emitters';
+import { Router } from '@angular/router';
+// Import the AuthService type from the SDK
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-adminpage',
@@ -9,20 +10,12 @@ import { Emitters } from 'app/emitters/emitters';
 export class AdminpageComponent implements OnInit {
   message = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(public auth: AuthService,) {}
 
   ngOnInit(): void {
-    this.http
-      .get('http://localhost:3000/accounts', { withCredentials: true })
-      .subscribe(
-        (res: any) => {
-          this.message = `Hi! ${res.data[0].username}`;
-          Emitters.authEmitter.emit(true);
-        },
-        (err) => {
-          this.message = 'You are not logged in';
-          Emitters.authEmitter.emit(false);
-        }
-      );
+  }
+
+  logout(){
+    this.auth.logout();
   }
 }

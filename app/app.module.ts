@@ -20,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './views/admin/admin/admin.component';
 import { AdminpageComponent } from './views/adminpage/adminpage.component';
 import { CreateuserComponent } from './views/createUser/createUser.component';
-
+// Import the module from the SDK
+import { AuthModule } from '@auth0/auth0-angular';
 @NgModule({
     declarations: [
         AppComponent,
@@ -45,7 +46,12 @@ import { CreateuserComponent } from './views/createUser/createUser.component';
         AppRoutingModule,
         HttpClientModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+           // Import the module into the application, with configuration
+       AuthModule.forRoot({
+        domain: 'dev-8ywcl6gfku8jyt8i.us.auth0.com',
+        clientId: 'D12NTCfFxOPcYvSNKfrg0kRcf7OD1cpC'
+      }),
     ]
 })
 export class AppModule {}

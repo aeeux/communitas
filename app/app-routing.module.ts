@@ -4,6 +4,9 @@ import { HomeComponent } from './views/home/home.component';
 import { AdminComponent } from './views/admin/admin/admin.component';
 import { AdminpageComponent } from './views/adminpage/adminpage.component';
 import { CreateuserComponent } from './views/createUser/createUser.component';
+// Import the authentication guard
+import { AuthGuard } from '@auth0/auth0-angular';
+
 const routes: Routes = [
   {
     path: '',
@@ -16,6 +19,8 @@ const routes: Routes = [
   {
     path: 'adminpage',
     component: AdminpageComponent,
+     // Protect a route by registering the auth guard in the `canActivate` hook
+     canActivate: [AuthGuard],
   },
   {
     path: 'createUser',
