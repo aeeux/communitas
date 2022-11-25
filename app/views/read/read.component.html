@@ -1,4 +1,39 @@
 <div class="container">
-<p>hej</p>
+  <h1 class="read">Read</h1>
+  <ul class="boks" *ngFor="let artikel of artikler">
+      <h1 class="overskrift"> {{artikel.verdensmaal}} </h1>
+    <li>
+      {{artikel.titel}}
+    </li>
+    <li>
+      {{artikel.desc}}
+    </li>
+    <li>
+      {{artikel.prob1}}
+    </li>
+    <li>
+      {{artikel.sol1}}
+    </li>
+    <li>
+      {{artikel.prob2}}
+    </li>
+    <li>
+      {{artikel.sol2}}
+    </li>
+    <li>
+      {{artikel.prob3}}
+    </li>
+    <li>
+      {{artikel.sol3}}
+    </li>
+    <li>
+      {{artikel.prob4}}
+    </li>
+    <li>
+      {{artikel.sol4}}
+    </li>
+  </ul>
+
 </div>
+
 
