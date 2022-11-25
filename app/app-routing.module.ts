@@ -3,6 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { AdminComponent } from './views/admin/admin/admin.component';
 import { AdminpageComponent } from './views/adminpage/adminpage.component';
+import { ReadComponent } from './views/read/read.component';
+import {UpdateComponent} from './views/update/update.component';
 // Import the authentication guard
 import { AuthGuard } from '@auth0/auth0-angular';
 
@@ -20,6 +22,14 @@ const routes: Routes = [
     component: AdminpageComponent,
      // Protect a route by registering the auth guard in the `canActivate` hook
      canActivate: [AuthGuard],
+  },
+  {
+    path: 'read',
+    component: ReadComponent,
+  },
+  {
+    path: 'update',
+    component: UpdateComponent,
   },
 ];
 

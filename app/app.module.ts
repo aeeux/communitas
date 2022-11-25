@@ -20,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './views/admin/admin/admin.component';
 import { AdminpageComponent } from './views/adminpage/adminpage.component';
 import { CreateuserComponent } from './views/createUser/createUser.component';
+import { ReadComponent } from './views/read/read.component';
+import {UpdateComponent} from './views/update/update.component';
 // Import the module from the SDK
 import { AuthModule } from '@auth0/auth0-angular';
 @NgModule({
@@ -32,7 +34,9 @@ import { AuthModule } from '@auth0/auth0-angular';
         IntroComponent,
         AdminComponent,
         AdminpageComponent,
-        CreateuserComponent
+        CreateuserComponent,
+        ReadComponent,
+        UpdateComponent
     ],
     providers: [
         ApiService,
