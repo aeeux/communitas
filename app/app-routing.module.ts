@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { AdminComponent } from './views/admin/admin/admin.component';
 import { AdminpageComponent } from './views/adminpage/adminpage.component';
+import { CreateuserComponent } from './views/createUser/createUser.component';
 const routes: Routes = [
   {
     path: '',
@@ -16,6 +17,10 @@ const routes: Routes = [
     path: 'adminpage',
     component: AdminpageComponent,
   },
+  {
+    path: 'createUser',
+    component: CreateuserComponent
+  }
 ];
 
 @NgModule({
