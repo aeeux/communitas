@@ -17,45 +17,41 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api/ApiService';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AdminComponent } from './views/admin/admin/admin.component';
 import { AdminpageComponent } from './views/adminpage/adminpage.component';
-import { CreateuserComponent } from './views/createUser/createUser.component';
 import { ReadComponent } from './views/read/read.component';
-import {UpdateComponent} from './views/update/update.component';
+import { UpdateComponent } from './views/update/update.component';
 // Import the module from the SDK
 import { AuthModule } from '@auth0/auth0-angular';
 @NgModule({
-    declarations: [
-        AppComponent,
-        ContentComponent,
-        FooterComponent,
-        HeroComponent,
-        HomeComponent,
-        IntroComponent,
-        AdminComponent,
-        AdminpageComponent,
-        CreateuserComponent,
-        ReadComponent,
-        UpdateComponent
-    ],
-    providers: [
-        ApiService,
-        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    ],
-    bootstrap: [AppComponent],
-    imports: [
-        CommonModule,
-        BrowserModule,
-        IonicModule.forRoot(),
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule,
-        ReactiveFormsModule,
-           // Import the module into the application, with configuration
-       AuthModule.forRoot({
-        domain: 'dev-8ywcl6gfku8jyt8i.us.auth0.com',
-        clientId: 'D12NTCfFxOPcYvSNKfrg0kRcf7OD1cpC'
-      }),
-    ]
+  declarations: [
+    AppComponent,
+    ContentComponent,
+    FooterComponent,
+    HeroComponent,
+    HomeComponent,
+    IntroComponent,
+    AdminpageComponent,
+    ReadComponent,
+    UpdateComponent,
+  ],
+  providers: [
+    ApiService,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+  ],
+  bootstrap: [AppComponent],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // Import the module into the application, with configuration
+    AuthModule.forRoot({
+      domain: 'dev-8ywcl6gfku8jyt8i.us.auth0.com',
+      clientId: 'D12NTCfFxOPcYvSNKfrg0kRcf7OD1cpC',
+    }),
+  ],
 })
 export class AppModule {}
