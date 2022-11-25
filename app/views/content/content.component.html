@@ -1,145 +1,46 @@
-<ion-grid class="p-7 sm:p-20">
-  <div
-    *ngIf="errormsg"
-    class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
-    role="alert"
-  >
-    <strong class="font-bold"
-      >Holy smokes! <br />
-      {{ errormsg }}</strong
-    >
-    <span class="block sm:inline">Something seriously bad happened.</span>
-  </div>
-
-  <form [formGroup]="articleForm" (ngSubmit)="articleSubmit()">
-    <div>
-      <input type="text" placeholder="title" formControlName="title" />
-    </div>
-    <div>
-      <input type="text" placeholder="description" formControlName="descr" />
-    </div>
-    <div>
-      <input type="text" placeholder="image" formControlName="image" />
-    </div>
-    <div>
-      <input type="text" placeholder="prob1" formControlName="prob1" />
-    </div>
-    <div>
-      <input type="text" placeholder="solu1" formControlName="solu1" />
-    </div>
-    <div>
-      <input type="text" placeholder="prob2" formControlName="prob2" />
-    </div>
-    <div>
-      <input type="text" placeholder="solu2" formControlName="solu2" />
-    </div>
-    <div>
-      <input type="text" placeholder="prob3" formControlName="prob3" />
-    </div>
-    <div>
-      <input type="text" placeholder="solu3" formControlName="solu3" />
-    </div>
-    <div>
-      <input type="text" placeholder="prob4" formControlName="prob4" />
-    </div>
-    <div>
-      <input type="text" placeholder="solu4" formControlName="solu4" />
-    </div>
-    <div>
-      <button class="bg-blue-500 px-3 py-1 w-full" type="submit">create</button>
-    </div>
-  </form>
+<ion-grid class="p-7 sm:p-20" *ngFor="let data of readData">
   <ion-row>
     <ion-col>
-      <h2 *ngFor="let data of readData" id="overskrift">
-        {{ data.idarticle }}
-        {{ data.title }}
-        {{ data.descr }}
-        {{ lifeBelowWater.title }}
-        {{ qualityEducation.title }}
-        {{ infrastructure.title }}
-        {{ genderEquality.title }}
-      </h2>
+      <h2 id="overskrift">{{ data.title }}</h2>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <p id="tekst" class="text-white/70" id="tekst">
-        {{ lifeBelowWater.desc }}
-        {{ qualityEducation.desc }}
-        {{ infrastructure.desc }}
-        {{ genderEquality.desc }}
-      </p>
+      <p id="tekst" class="text-white/70" id="tekst">{{ data.descr }}</p>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
       <div class="pic rounded-xl">
-        <img src="{{ lifeBelowWater.image }}" alt="" />
-        <img src="{{ qualityEducation.image }}" alt="" />
-        <img src="{{ infrastructure.image }}" alt="" />
-        <img src="{{ genderEquality.image }}" alt="" />
+        <img src="{{ data.image }}" alt="" />
       </div>
     </ion-col>
   </ion-row>
   <ion-row>
     <h2 id="overskrift" class="pt-16">
-      {{ lifeBelowWater.prob1 }}
-      {{ qualityEducation.prob1 }}
-      {{ infrastructure.prob1 }}
-      {{ genderEquality.prob1 }}
+      {{ data.prob1 }}
     </h2>
   </ion-row>
   <ion-row>
-    <p id="tekst" class="text-white/70" id="tekst">
-      {{ lifeBelowWater.solu1 }}
-      {{ qualityEducation.solu1 }}
-      {{ infrastructure.solu1 }}
-      {{ genderEquality.solu1 }}
-    </p>
+    <p id="tekst" class="text-white/70" id="tekst">{{ data.solu1 }}</p>
   </ion-row>
   <ion-row>
-    <h2 id="overskrift" class="pt-16">
-      {{ lifeBelowWater.prob2 }}
-      {{ qualityEducation.prob2 }}
-      {{ infrastructure.prob2 }}
-      {{ genderEquality.prob2 }}
-    </h2>
+    <h2 id="overskrift" class="pt-16">{{ data.prob2 }}</h2>
   </ion-row>
   <ion-row>
-    <p id="tekst" class="text-white/70" id="tekst">
-      {{ lifeBelowWater.solu2 }}
-      {{ qualityEducation.solu2 }}
-      {{ infrastructure.solu2 }}
-      {{ genderEquality.solu2 }}
-    </p>
+    <p id="tekst" class="text-white/70" id="tekst">{{ data.solu2 }}</p>
   </ion-row>
   <ion-row>
-    <h2 id="overskrift" class="pt-16">
-      {{ lifeBelowWater.prob3 }}
-      {{ qualityEducation.prob3 }}
-
-      {{ genderEquality.prob3 }}
-    </h2>
+    <h2 id="overskrift" class="pt-16">{{ data.prob3 }}</h2>
   </ion-row>
   <ion-row>
-    <p id="tekst" class="text-white/70" id="tekst">
-      {{ lifeBelowWater.solu3 }}
-      {{ qualityEducation.solu3 }}
-      {{ genderEquality.solu3 }}
-    </p>
+    <p id="tekst" class="text-white/70" id="tekst">{{ data.solu3 }}</p>
   </ion-row>
   <ion-row>
-    <h2 id="overskrift" class="pt-16">
-      {{ lifeBelowWater.prob4 }}
-      {{ genderEquality.prob4 }}
-    </h2>
+    <h2 id="overskrift" class="pt-16">{{ data.prob4 }}</h2>
   </ion-row>
   <ion-row>
-    <p id="tekst" class="text-white/70" id="tekst">
-      {{ lifeBelowWater.solu4 }}
-      {{ genderEquality.solu4 }}
-    </p>
+    <p id="tekst" class="text-white/70" id="tekst">{{ data.solu4 }}</p>
   </ion-row>
   <div class="pic rounded-xl"></div>
 </ion-grid>
