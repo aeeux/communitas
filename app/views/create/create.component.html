@@ -1,9 +1,5 @@
 <ion-grid class="bg-gradient-to-t from-black to-mainBlue">
-  <form
-    class="px-7 sm:px-20"
-    [formGroup]="articleForm"
-    (ngSubmit)="articleSubmit()"
-  >
+  <form class="px-7 sm:px-20" [formGroup]="articleForm">
     <ion-grid class="">
       <ion-row class="flex">
         <ion-col>
@@ -224,15 +220,28 @@
     <ion-grid class="">
       <ion-row class="">
         <ion-col size="2">
-          <ion-button class="mx-5" type="submit" expand="block" fill="outline"
-            >Create
+          <ion-button
+            *ngIf="!getparamid"
+            (click)="articleSubmit()"
+            class="mx-5"
+            type="submit"
+            expand="block"
+            fill="outline"
+          >
+            Create
           </ion-button>
         </ion-col>
-
-        <ion-col class="" size="2">
-          <ion-button type="button" class="" (click)="logout()"
-            >Sign out</ion-button
+        <ion-col size="2">
+          <ion-button
+            *ngIf="getparamid"
+            (click)="articleUpdate()"
+            class="mx-5"
+            type="submit"
+            expand="block"
+            fill="outline"
           >
+            <a [routerLink]="['/create', data.idarticle]">Update</a>
+          </ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
