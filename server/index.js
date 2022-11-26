@@ -118,7 +118,7 @@ app.put("/article/:id", (req, res) => {
   let prob4 = req.body.prob4;
   let solu4 = req.body.solu4;
 
-  let qry = `UPDATE article set title = '${title}', descr = '${descr}', image = '${image}', prob1 = '${prob1}', solu1 = '${solu1}', prob2 = '${prob2}', solu2 = '${solu2}', prob3 = '${prob3}', solu3 = '${solu3}', prob4 = '${prob4}', solu4 = '${solu4}'
+  let qry = `UPDATE article set title = "${title}", descr = "${descr}", image = "${image}", prob1 = "${prob1}", solu1 = "${solu1}", prob2 = "${prob2}", solu2 = "${solu2}", prob3 = "${prob3}", solu3 = "${solu3}", prob4 = "${prob4}", solu4 = "${solu4}"
   WHERE idarticle = ${aID}
   `;
 
