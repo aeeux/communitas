@@ -1,44 +1,63 @@
-<div class="container">
-  <h1 class="read">Read</h1>
-  <ul class="boks" *ngFor="let data of readData">
-    <div class="bg-blue-500 px-3 py-2">
-      <button>
-        <a [routerLink]="['/update', data.idarticle]">Edit</a>
-      </button>
-    </div>
-    <h1 class="overskrift">{{ data.title }}</h1>
-    <li>
-      {{ data.title }}
-    </li>
-    <li>
-      {{ data.descr }}
-    </li>
-    <li>
-      {{ data.prob1 }}
-    </li>
-    <li>
-      {{ data.sol1 }}
-    </li>
-    <li>
-      {{ data.prob2 }}
-    </li>
-    <li>
-      {{ data.sol2 }}
-    </li>
-    <li>
-      {{ data.prob3 }}
-    </li>
-    <li>
-      {{ data.sol3 }}
-    </li>
-    <li>
-      {{ data.prob4 }}
-    </li>
-    <li>
-      {{ data.sol4 }}
-    </li>
-    <div class="bg-red-500 px-3 py-2">
-      <button (click)="deleteArticleID(data.idarticle)">Delete</button>
-    </div>
-  </ul>
+<div class="h-screen">
+  <h1 class="text-3xl text-center mb-12">Read</h1>
+  <section class="grid grid-cols-3">
+    <ul
+      class="bg-white/10 rounded-md p-10 m-5 flex flex-col"
+      *ngFor="let data of readData"
+    >
+      <div class="justify-between flex">
+        <button
+          class="bg-blue-500 px-8 py-2 rounded-sm"
+          [routerLink]="['/update', data.idarticle]"
+        >
+          Edit
+        </button>
+        <button
+          class="bg-red-500 px-8 py-2 rounded-sm"
+          (click)="deleteArticleID(data.idarticle)"
+        >
+          Delete
+        </button>
+      </div>
+      <div class="mb-auto">
+        <h1 class="text-4xl mb-6 font-bold pt-6">{{ data.title }}</h1>
+        <label class="text-white text-xl mb-3">Description</label>
+        <li class="bg-white/5 p-4 rounded-md text-lg text-white/60">
+          {{ data.descr }}
+        </li>
+        <label class="text-white text-xl mb-3">Problem 1</label>
+        <li class="bg-white/5 p-4 rounded-md text-lg text-white/60">
+          {{ data.prob1 }}
+        </li>
+        <label class="text-white text-xl mb-3">Solution 1</label>
+        <li class="bg-white/5 p-4 rounded-md text-lg text-white/60">
+          {{ data.solu1 }}
+        </li>
+        <label class="text-white text-xl mb-3">Problem 2</label>
+        <li class="bg-white/5 p-4 rounded-md text-lg text-white/60">
+          {{ data.prob2 }}
+        </li>
+        <label class="text-white text-xl mb-3">Solution 2</label>
+        <li class="bg-white/5 p-4 rounded-md text-lg text-white/60">
+          {{ data.solu2 }}
+        </li>
+        <label class="text-white text-xl mb-3">Problem 3</label>
+        <li class="bg-white/5 p-4 rounded-md text-lg text-white/60">
+          {{ data.prob3 }}
+        </li>
+        <label class="text-white text-xl mb-3">Solution 3</label>
+        <li class="bg-white/5 p-4 rounded-md text-lg text-white/60">
+          {{ data.solu3 }}
+        </li>
+        <label class="text-white text-xl mb-3">Problem 4</label>
+        <li class="bg-white/5 p-4 rounded-md text-lg text-white/60">
+          {{ data.prob4 }}
+        </li>
+        <label class="text-white text-xl mb-3">Solution 4</label>
+        <li class="bg-white/5 p-4 rounded-md text-lg text-white/60">
+          {{ data.solu4 }}
+        </li>
+      </div>
+    </ul>
+  </section>
 </div>
