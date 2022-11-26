@@ -3,7 +3,6 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { AdminpageComponent } from './views/adminpage/adminpage.component';
 import { ReadComponent } from './views/read/read.component';
-import { UpdateComponent } from './views/update/update.component';
 import { CreateComponent } from './views/create/create.component';
 // Import the authentication guard
 import { AuthGuard } from '@auth0/auth0-angular';
