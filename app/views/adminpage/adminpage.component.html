@@ -1,19 +1,30 @@
-<ul *ngIf="auth.user$ | async as user">
-  <ion-title class="px-7 sm:px-20 md:mx-40 py-20"
-    >Welcome {{ user.name }}</ion-title
-  >
-</ul>
+<div class="h-screen">
+  <section class="px-7 sm:px-20 md:mx-40 py-20">
+    <section class="mb-12">
+      <ul *ngIf="auth.user$ | async as user">
+        <ion-title class="">Welcome {{ user.name }}</ion-title>
+      </ul>
+    </section>
 
-<ion-col class="" size="2">
-  <ion-button type="button" class="">
-    <a href="/create">Create Article</a>
-  </ion-button>
-</ion-col>
-<ion-col class="" size="2">
-  <ion-button type="button" class="">
-    <a href="/read">Read or Edit Articles</a>
-  </ion-button>
-</ion-col>
-<ion-col class="" size="2">
-  <ion-button type="button" class="" (click)="logout()">Sign out</ion-button>
-</ion-col>
+    <section class="grid grid-cols-3 gap-5">
+      <span class="bg-white/10 p-24 rounded-md">
+        <h2>Create an Article</h2>
+        <ion-button type="button" class="">
+          <a href="/create">Create Article</a>
+        </ion-button>
+      </span>
+      <span class="bg-white/10 p-24">
+        <h2>Read or Edit an Article</h2>
+        <ion-button type="button" class="">
+          <a href="/read">Read or Edit Articles</a>
+        </ion-button>
+      </span>
+      <span class="bg-white/10 p-24">
+        <h2>Sign out</h2>
+        <ion-button type="button" class="" (click)="logout()"
+          >Sign out</ion-button
+        >
+      </span>
+    </section>
+  </section>
+</div>
