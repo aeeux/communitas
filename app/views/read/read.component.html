@@ -1,39 +1,44 @@
 <div class="container">
   <h1 class="read">Read</h1>
-  <ul class="boks" *ngFor="let artikel of artikler">
-      <h1 class="overskrift"> {{artikel.verdensmaal}} </h1>
+  <ul class="boks" *ngFor="let data of readData">
+    <div class="bg-blue-500 px-3 py-2">
+      <button>
+        <a [routerLink]="['/create', data.idarticle]">Edit</a>
+      </button>
+    </div>
+    <h1 class="overskrift">{{ data.title }}</h1>
     <li>
-      {{artikel.titel}}
+      {{ data.title }}
     </li>
     <li>
-      {{artikel.desc}}
+      {{ data.descr }}
     </li>
     <li>
-      {{artikel.prob1}}
+      {{ data.prob1 }}
     </li>
     <li>
-      {{artikel.sol1}}
+      {{ data.sol1 }}
     </li>
     <li>
-      {{artikel.prob2}}
+      {{ data.prob2 }}
     </li>
     <li>
-      {{artikel.sol2}}
+      {{ data.sol2 }}
     </li>
     <li>
-      {{artikel.prob3}}
+      {{ data.prob3 }}
     </li>
     <li>
-      {{artikel.sol3}}
+      {{ data.sol3 }}
     </li>
     <li>
-      {{artikel.prob4}}
+      {{ data.prob4 }}
     </li>
     <li>
-      {{artikel.sol4}}
+      {{ data.sol4 }}
     </li>
+    <div class="bg-red-500 px-3 py-2">
+      <button (click)="deleteArticleID(data.idarticle)">Delete</button>
+    </div>
   </ul>
-
 </div>
-
-
