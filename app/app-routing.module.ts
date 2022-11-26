@@ -22,18 +22,22 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreateComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path: 'create/:id',
+    path: 'update/:id',
     component: CreateComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'read',
     component: ReadComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'read/:id',
     component: ReadComponent,
+    canActivate: [AuthGuard],
   },
 ];
 
