@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// Import the AuthService type from the SDK
+import { AuthService } from '@auth0/auth0-angular';
+import { ApiService } from 'app/api/ApiService';
 
 @Component({
   selector: 'app-read',
@@ -6,76 +9,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./read.component.scss'],
 })
 export class ReadComponent implements OnInit {
+  message = '';
+  readData: any;
+  successmsg: any;
 
-  artikler = [
-    {
-      verdensmaal: 'verdensmål 4',
-      titel: 'titel 1',
-      desc: 'dette er en beskrivelse',
-      // eslint-disable-next-line max-len
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Eq5SBB6WjhIeeLVBaA16wQ6dXK49DNWRYUcl8GzmW3yfQ5pd3-0XbK9RfI7vWgg74Bk&usqp=CAU',
-      prob1: 'problem 1',
-      sol1: 'solution 1',
-      prob2: 'problem 2',
-      sol2: 'solution 2',
-      prob3: 'problem 3',
-      sol3: 'solution 3',
-      prob4: 'problem 4',
-      sol4: 'solution 4'
+  constructor(public auth: AuthService, public service: ApiService) {}
 
-    },
-    {
-      verdensmaal: 'verdensmål 9',
-      titel: 'titel 1',
-      desc: 'dette er en beskrivelse',
-      // eslint-disable-next-line max-len
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Eq5SBB6WjhIeeLVBaA16wQ6dXK49DNWRYUcl8GzmW3yfQ5pd3-0XbK9RfI7vWgg74Bk&usqp=CAU',
-      prob1: 'problem 1',
-      sol1: 'solution 1',
-      prob2: 'problem 2',
-      sol2: 'solution 2',
-      prob3: 'problem 3',
-      sol3: 'solution 3',
-      prob4: 'problem 4',
-      sol4: 'solution 4'
+  ngOnInit() {
+    this.getAllData();
+  }
 
-    },
-    {
-      verdensmaal: 'verdensmål 14',
-      titel: 'titel 1',
-      desc: 'dette er en beskrivelse',
-      // eslint-disable-next-line max-len
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Eq5SBB6WjhIeeLVBaA16wQ6dXK49DNWRYUcl8GzmW3yfQ5pd3-0XbK9RfI7vWgg74Bk&usqp=CAU',
-      prob1: 'problem 1',
-      sol1: 'solution 1',
-      prob2: 'problem 2',
-      sol2: 'solution 2',
-      prob3: 'problem 3',
-      sol3: 'solution 3',
-      prob4: 'problem 4',
-      sol4: 'solution 4'
+  logout() {
+    this.auth.logout();
+  }
 
-    },
-    {
-      verdensmaal: 'verdensmål 2',
-      titel: 'titel 1',
-      desc: 'dette er en beskrivelse',
-      // eslint-disable-next-line max-len
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Eq5SBB6WjhIeeLVBaA16wQ6dXK49DNWRYUcl8GzmW3yfQ5pd3-0XbK9RfI7vWgg74Bk&usqp=CAU',
-      prob1: 'problem 1',
-      sol1: 'solution 1',
-      prob2: 'problem 2',
-      sol2: 'solution 2',
-      prob3: 'problem 3',
-      sol3: 'solution 3',
-      prob4: 'problem 4',
-      sol4: 'solution 4'
+  deleteArticleID(id: any) {
+    this.service.deleteArticleData(id).subscribe((res) => {
+      this.successmsg = res.message;
 
-    }
-  ];
+      this.getAllData();
+    });
+  }
 
-  constructor() { }
+  getAllData() {
+    this.service.getAllArticleData().subscribe((res) => {
+      console.log(res, 'res ==>');
 
-  ngOnInit() {}
-
+      this.readData = res.data;
+    });
+  }
 }
