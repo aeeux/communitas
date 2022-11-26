@@ -6,14 +6,15 @@ import { ApiService } from 'app/api/ApiService';
 @Component({
   selector: 'app-read',
   templateUrl: './read.component.html',
-  styleUrls: ['./read.component.scss'],
 })
 export class ReadComponent implements OnInit {
   message = '';
   readData: any;
   successmsg: any;
 
-  constructor(public auth: AuthService, public service: ApiService) {}
+  constructor(public auth: AuthService, public service: ApiService) {
+    this.getAllData();
+  }
 
   ngOnInit() {
     this.getAllData();
