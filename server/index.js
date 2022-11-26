@@ -103,7 +103,7 @@ app.post("/article", (req, res) => {
 });
 
 //update data
-app.put("article/:id", (req, res) => {
+app.put("/article/:id", (req, res) => {
   let aID = req.params.id;
 
   let title = req.body.title;
@@ -118,8 +118,8 @@ app.put("article/:id", (req, res) => {
   let prob4 = req.body.prob4;
   let solu4 = req.body.solu4;
 
-  let qry = `UPDATE article set title = '${title}', descr = '${descr}', image = '${image}', prob1 = '${prob1}', solu1 = '${solu1}', prob2 = '${prob2}', solu2 = '${solu2}', prob3 = '${prob3}', solu3 = '${solu3}'
-  WHERE id = ${aID}
+  let qry = `UPDATE article set title = '${title}', descr = '${descr}', image = '${image}', prob1 = '${prob1}', solu1 = '${solu1}', prob2 = '${prob2}', solu2 = '${solu2}', prob3 = '${prob3}', solu3 = '${solu3}', prob4 = '${prob4}', solu4 = '${solu4}'
+  WHERE idarticle = ${aID}
   `;
 
   console.log(req.body, "update article data");
@@ -132,6 +132,26 @@ app.put("article/:id", (req, res) => {
     res.send({
       message: "Article Data Updated!",
       // data: result,
+    });
+  });
+});
+
+//delete article data
+app.delete("/article/:id", (req, res) => {
+  let aID = req.params.id;
+
+  let qry = `DELETE FROM article WHERE idarticle = '${aID}'`;
+
+  console.log(req.body, "delete article data");
+
+  db.query(qry, (err, result) => {
+    if (err) {
+      console.log(err);
+    }
+
+    res.send({
+      message: "Article Data Deleted!",
+      //data: result,
     });
   });
 });
