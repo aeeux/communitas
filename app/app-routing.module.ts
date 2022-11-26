@@ -13,7 +13,6 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
   },
-
   {
     path: 'adminpage',
     component: AdminpageComponent,
@@ -25,7 +24,15 @@ const routes: Routes = [
     component: CreateComponent,
   },
   {
+    path: 'create/:id',
+    component: CreateComponent,
+  },
+  {
     path: 'read',
+    component: ReadComponent,
+  },
+  {
+    path: 'read/:id',
     component: ReadComponent,
   },
 ];
