@@ -4,11 +4,16 @@
   >
 </ul>
 
-<div class="">
-  <button class="flex">
-    <a href="/create">Create an Article!</a>
-  </button>
-  <button class="flex">
-    <a href="/read">Read or Update an Article!</a>
-  </button>
-</div>
+<ion-col class="" size="2">
+  <ion-button type="button" class="">
+    <a href="/create">Create Article</a>
+  </ion-button>
+</ion-col>
+<ion-col class="" size="2">
+  <ion-button type="button" class="">
+    <a href="/read">Read or Edit Articles</a>
+  </ion-button>
+</ion-col>
+<ion-col class="" size="2">
+  <ion-button type="button" class="" (click)="logout()">Sign out</ion-button>
+</ion-col>
