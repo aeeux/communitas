@@ -7,10 +7,10 @@ const mysql = require("mysql");
 
 const db = mysql.createPool({
   port: 3306,
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "everywell",
+  host: "remotemysql.com",
+  user: "0Jgtwyh4DG",
+  password: "Eg1qlFfAy8",
+  database: "0Jgtwyh4DG",
 });
 
 module.exports = db;
