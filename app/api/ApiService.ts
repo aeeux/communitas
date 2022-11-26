@@ -18,20 +18,33 @@ export class ApiService {
     return this._http.get(`${this.apiUrl}`);
   }
 
-  //Create
+  //get single article data
+  getSingleArticleData(id: any): Observable<any> {
+    let ids = id;
+    return this._http.get(`${this.apiUrl}/${ids}`);
+  }
+
+  //Create Article Data
   createArticleData(data: any): Observable<any> {
     console.log(data, 'create');
     return this._http.post(`${this.apiUrl}`, data);
   }
 
-  //Create
+  //Post Account Data
   postAccountData(data: any, prop: any): Observable<any> {
     console.log(data, 'post');
     return this._http.post(`${this.apiUrlAccounts}`, data, prop);
   }
 
-  //get article data for params /:id (1)
-  //get article data for params /:id (2)
-  //get article data for params /:id (3)
-  //get article data for params /:id (4)
+  //Delete Article Data
+  deleteArticleData(id: any): Observable<any> {
+    let ids = id;
+    return this._http.delete(`${this.apiUrl}/${ids}`);
+  }
+
+  //Update Article Data
+  updateArticleData(data: any, id: any): Observable<any> {
+    let ids = id;
+    return this._http.put(`${this.apiUrl}/${ids}`, data);
+  }
 }
