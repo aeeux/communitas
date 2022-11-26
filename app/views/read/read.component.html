@@ -3,7 +3,7 @@
   <ul class="boks" *ngFor="let data of readData">
     <div class="bg-blue-500 px-3 py-2">
       <button>
-        <a [routerLink]="['/create', data.idarticle]">Edit</a>
+        <a [routerLink]="['/update', data.idarticle]">Edit</a>
       </button>
     </div>
     <h1 class="overskrift">{{ data.title }}</h1>
